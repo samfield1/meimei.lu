@@ -1,0 +1,413 @@
+/************
+** GENERAL **
+************/
+
+* {-webkit-font-smoothing: antialiased;}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Alokary";
+  src: url("/assets/fonts/alokary.ttf");
+}
+@font-face {
+  font-family: "Romana";
+  src: url("/assets/fonts/romana.otf");
+}
+@font-face {
+  font-family: "Alata";
+  src: url("/assets/fonts/alata.ttf");
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/fraunces.ttf");
+}
+
+
+/***********
+** HEADER **
+***********/
+
+/* Global */
+.top-links {
+  position: relative;
+  height: 110px;
+  width: 100%;
+}
+
+.top-links div {
+  display: inline-block;
+  position: absolute;
+}
+
+.about {
+  color: #fbf3ea;
+  text-align: center;
+  font: 400 16px "Alokary", serif;
+  letter-spacing: 0.18em;
+  width: 90px;
+  left: calc(25% - 80.5px);
+  margin: 40px 0 0 -45px;
+}
+
+.meimei-lu-logo {
+  left: 50%;
+  margin-left: -162px;
+  text-align: center;
+  width: 324px;
+  height: 110px;
+}
+
+.meimei-lu-0, .meimei-lu-1, .meimei-lu-2 {
+  color: #fbf3ea;
+  text-align: center;
+  font: 400 40px "Alokary", serif;
+  letter-spacing: 0.18em;
+  width: 322px;
+}
+.meimei-lu-0 {left: 0;}
+.meimei-lu-1 {left: 1px;}
+.meimei-lu-2 {left: 2px;}
+
+.m-cover-0, .m-cover-1 {
+  width: 11px;
+  height: 2px;
+  top: 66px;
+}
+
+.contact {
+  color: #fbf3ea;
+  text-align: center;
+  font: 400 16px "Alokary", serif;
+  letter-spacing: 0.18em;
+  width: 110px;
+  left: calc(75% + 80.5px);
+  margin: 40px 0 0 -55px;
+
+}
+
+.line-sep {
+  display: block;
+  border-style: solid;
+  border-color: #fbf3ea;
+  border-width: 3px 0 0 0;
+  margin-top: auto;
+}
+
+
+/* Main page */
+body.main-page {
+  background-color: #97a291;
+}
+
+body.main-page .top-links {
+  background-color: #97a291;
+}
+
+body.main-page .m-cover-0 {
+  background-color: #97a291;
+  left: 16px;
+}
+
+body.main-page .m-cover-1 {
+  background-color: #97a291;
+  left: 127px;
+}
+
+
+/* About page */
+body.about-page {
+  background-color: #c43730;
+}
+
+body.about-page .top-links {
+  background-color: #c43730;
+}
+
+body.about-page .m-cover-0 {
+  background-color: #c43730;
+  left: 128px;
+}
+
+body.works-page .top-links {
+  background-color: #50566A;
+}
+
+/***********
+*** MAIN ***
+***********/
+
+/* Global */
+.bg-img-container {position: relative;}
+.bg-img {width: 100%;}
+
+
+/* Main page */
+.view-works {
+  letter-spacing: 0.07em;
+  position: absolute;
+  color: #fbf3ea;
+  text-align: center;
+  font: 400 24px "Romana", serif;
+  border-radius: 100px;
+  border-style: solid;
+  border-color: #fbf3ea;
+  border-width: 2px;
+  width: 220px;
+  margin-left: -110px;
+  left: 50%;
+  top: 60px;
+  padding: 10px 0;
+}
+
+
+/* About page */
+.back-chevron {
+  position: absolute;
+  left: 1.5%;
+  top: 1%;
+  padding: 14px;
+  z-index: 1;
+}
+
+.content-container {
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.polaroid-container {
+  position: static;
+  height: 480px;
+}
+
+.polaroid-about-left {
+  height: 350px;
+  position: absolute;
+  transform: rotate(-3.822deg);
+  z-index: 3;
+  left: 90px;
+  top: 130px;
+}
+
+.polaroid-about-right {
+  height: 350px;
+  position: absolute;
+  transform: rotate(7.528deg);
+  z-index: 2;
+  left: 280px;
+  top: 180px;
+}
+
+.about-me-container {
+  padding: 0;
+  margin-top: 55px;
+}
+
+.about-me-frame {
+  text-align: center;
+  background-color: #fbf3ea;
+  border-radius: 20px;
+  width: 535px;
+  margin: auto;
+  z-index: 10;
+}
+
+.about-me-bg {
+  position: relative;
+}
+
+.about-me-bg:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background: url("/assets/fabric.webp"), lightgray 25%;
+  background-size: 200%;
+  border-radius: 20px;
+  mix-blend-mode: color-burn;
+  z-index: 20;
+}
+
+.about-me-title {
+  position: relative;
+  z-index: 30;
+  color: #545454;
+  font: 400 36px "Romana", serif;
+  padding: 55px 0 30px 0;
+}
+
+.about-me-body {
+  position: relative;
+  z-index: 30;
+  color: #545454;
+  font: 400 16px "Alata", sans-serif;
+  margin: 15px 83px;
+  padding-bottom: 35px;
+}
+
+/* Contact */
+.polaroid-contact-left {
+  height: 350px;
+  position: absolute;
+  transform: rotate(-6.414deg);
+  z-index: 1;
+  left: 80px;
+  top: 130px;
+}
+
+.polaroid-contact-right {
+  height: 350px;
+  position: absolute;
+  transform: rotate(9.433deg);
+  z-index: 2;
+  left: 330px;
+  top: 180px;
+}
+
+.contact-body {
+  position: relative;
+  z-index: 30;
+  color: #545454;
+  font: 400 36px "Romana", serif;
+  text-align: left;
+  margin-left: 100px;
+  padding-bottom: 45px;
+}
+
+/* Works page */
+body.works-page {
+  background-image: none;
+}
+
+body.works-page h1 {
+  color: #50566A;
+  text-align: center;
+  font-family: Romana;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.back-btn {
+  margin: 15px 5px;
+  height: 75px;
+}
+
+.back-btn a {
+  font-size: 0;
+  float: left;
+  padding: 15px;
+}
+
+.works-category {
+  margin-bottom: 150px;
+}
+
+.works-category-heading {
+  margin: 20px 32px;
+}
+
+.works-category-heading a {
+  display: inline-block;
+  margin-top: -10px;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.works-category-heading .finger-right {
+  height: 25px;
+}
+
+.works-category-title {
+  color: #50566A;
+  font-family: Romana;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-right: 10px;
+}
+
+.works-category-img-container img {
+  width: 100%;
+}
+
+.end-card {
+  text-align: center;
+  margin-bottom: 250px;
+}
+
+.end-card a {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.end-card .finger-up {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+.finger-left, .finger-right, .finger-up {
+  height: 32px;
+  vertical-align: middle;
+}
+
+.finger-left {
+  transform: scaleX(-1);
+}
+
+.finger-up {
+  transform: rotate(-90deg);
+}
+
+/* Works subpages */
+
+.works-img-container {
+  height: 400px;
+  overflow: hidden;
+}
+
+.works-img-container img {
+  width: 100%;
+}
+
+.works-caption-title {
+  font-family: "Fraunces", serif;
+}
+
+/* Work main pages */
+.work-img-container {
+  overflow: hidden;
+}
+
+.col-md-12 .work-img-container {
+  height: auto;
+}
+
+.col-md-6 .work-img-container {
+  height: auto;
+}
+
+.work-img-container img {
+  width: 100%;
+}
+
+.page-item.prev {
+  float: left;
+}
+
+.page-item.next {
+  float: right;
+}
