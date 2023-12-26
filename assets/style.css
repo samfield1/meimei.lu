@@ -25,7 +25,14 @@ a {
   font-family: "Fraunces";
   src: url("/assets/fonts/fraunces.ttf");
 }
-
+@font-face {
+  font-family: "Tamil";
+  src: url("/assets/fonts/tamil.ttc");
+}
+@font-face {
+  font-family: "Tofino";
+  src: url("/assets/fonts/tofino.ttf");
+}
 
 /***********
 ** HEADER **
@@ -285,7 +292,8 @@ body.works-page .top-links {
 
 /* Works page */
 body.works-page {
-  background-image: none;
+  background-image: url("/assets/fabric-burned.webp");
+  background-size: 1500px;
 }
 
 body.works-page h1 {
@@ -338,6 +346,12 @@ body.works-page h1 {
   margin-right: 10px;
 }
 
+@media (min-width: 768px) {
+  .works-category-img-container {
+    margin: 0 20%;
+  }
+}
+
 .works-category-img-container img {
   width: 100%;
 }
@@ -372,26 +386,75 @@ body.works-page h1 {
   transform: rotate(-90deg);
 }
 
-/* Works subpages */
+/* Works category pages */
+.works-heading-spacer {
+  height: 100px;
+}
 
 .works-img-container {
-  height: 400px;
+  padding-top: 60%;
   overflow: hidden;
+  position: relative;
 }
 
 .works-img-container img {
   width: 100%;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
 }
 
 .works-caption-title {
   font-family: "Fraunces", serif;
+  color: #50566A; 
+  font-size: 24px;
+  line-height: normal;
+  margin: 8px 0;
+}
+
+.works-caption-type, .works-caption-tags {
+  color: #50566A;
+  font-family: "Tamil", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.works-caption-tags {
+  font-weight: 400;
+  margin-bottom: 75px;
 }
 
 /* Work main pages */
+.work-title {
+  color: #50566A;
+  font-family: "Romana";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.work-category {
+  font-style: italic;
+}
+
+.work-description, .work-category {
+  color: #50566A;
+  font-family: "Tofino", sans-serif;
+  font-size: 18px;
+}
+
 .work-img-container {
   overflow: hidden;
 }
 
+.work-line-sep {
+  height: 2px;
+  background: #50566A;
+}
 .col-md-12 .work-img-container {
   height: auto;
 }

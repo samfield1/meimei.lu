@@ -17,7 +17,7 @@
   <link rel="author" href="https://www.behance.net/meimeilu1e80" />
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   {% if page.title != "" %}
-    <title>Meimei Lu - {{ page.title }}</title>
+    <title>Meimei Lu - {{ page.title | strip_html }}</title>
   {% else %}
     <title>Meimei Lu </title>
   {% endif %}

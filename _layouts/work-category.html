@@ -23,12 +23,13 @@
         <a href="/works"><img class="finger-left" src="/assets/finger.webp" /></a>
       </div>
       <h1>{{ page.title | upcase }}</h1>
-      <div class="container">
-        <div class="row">
+      <div class="works-heading-spacer"></div>
+      <div class="container gx-5">
+        <div class="row gx-5">
           {% assign works = site.works | sort: "priority" %}
           {% for work in works %}
             {% if work.category == page.category %}
-              <div class="col-lg-6">
+              <div class="col-md-6">
                 <a href="{{ work.url }}">
                   <div class="works-img-container">
                     <img src="/assets{{ work.url }}cover.webp" />
@@ -36,7 +37,7 @@
                   <div class="works-caption">
                     <div class="works-caption-title">{{ work.title }}</div>
                     {% if work.type %}<div class="works-caption-type">{{ work.type | upcase }}</div>{% endif %}
-                    <div class="works-caption-tags_str">{{ work.tags | join: ", " | upcase}}</div>
+                    <div class="works-caption-tags">{{ work.tags | join: ", " | upcase}}</div>
                   </div>
                 </a>
               </div>
