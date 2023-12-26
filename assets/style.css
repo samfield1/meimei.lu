@@ -451,10 +451,20 @@ body.works-page h1 {
   overflow: hidden;
 }
 
-.work-line-sep {
+div.work-line-sep {
+  display: block;
   height: 2px;
-  background: #50566A;
+  border: 0;
+  border-top: 2px solid #50566A;
+  color: #50566A;
+  margin: 40px 0 40px;
+  padding: 0;
 }
+
+hr.work-line-sep {
+  display: none;
+}
+
 .col-md-12 .work-img-container {
   height: auto;
 }
@@ -468,9 +478,25 @@ body.works-page h1 {
 }
 
 .page-item.prev {
+  color: #373B4B;
+  text-align: center;
+  font-family: "Romana";
+  font-size: 26px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 500;
+  padding-left: 30px;
   float: left;
 }
 
 .page-item.next {
+  color: #373B4B;
+  text-align: center;
+  font-family: "Romana";
+  font-size: 26px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 500;
+  padding-right: 30px;
   float: right;
 }

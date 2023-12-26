@@ -22,7 +22,7 @@
       </div>
       {{ page.content }}
       <!-- Pagination links -->
-      <hr class="work-line-sep" />
+      <div class="work-line-sep"></div><hr class="work-line-sep" />
       <div class="pagination">
         {% assign works_all = site.works | where_exp: "work","work.category == page.category" %}
         {% assign works_after = works_all | where_exp: "work","work.priority > page.priority" %}
@@ -45,7 +45,7 @@
           </div>
         {% endif %}
       </div>
-      <hr class="work-line-sep" />
+      <div class="work-line-sep"></div><hr class="work-line-sep" />
       <div class="end-card">
         <a href="#">
           <img class="finger-up" src="/assets/finger.webp" />
