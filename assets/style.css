@@ -321,6 +321,12 @@ body.works-page h1 {
   margin-bottom: 150px;
 }
 
+@media (min-width: 768px) {
+  .works-category {
+    margin: 0 20%;
+  }
+}
+
 .works-category-heading {
   margin: 20px 32px;
 }
@@ -344,12 +350,6 @@ body.works-page h1 {
   font-weight: 500;
   line-height: normal;
   margin-right: 10px;
-}
-
-@media (min-width: 768px) {
-  .works-category-img-container {
-    margin: 0 20%;
-  }
 }
 
 .works-category-img-container img {
