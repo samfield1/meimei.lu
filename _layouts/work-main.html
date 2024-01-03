@@ -22,6 +22,7 @@
       </div>
       {{ page.content }}
       <!-- Pagination links -->
+      <div class="work-content-end-spacer"></div>
       <div class="work-line-sep"></div><hr class="work-line-sep" />
       <div class="pagination">
         {% assign works_all = site.works | where_exp: "work","work.category == page.category" %}
@@ -35,17 +36,26 @@
 
         {% if prev_work %}
           <div class="page-item prev me-auto">
-            <a href="{{ prev_work.url }}">Previous Project<br /> {{ prev_work.title }}</a>
+            <a href="{{ prev_work.url }}">Previous Project<!--<br /> {{ prev_work.title }}--></a>
           </div>
-          {% endif %}
+        {% else %}
+          <div class="page-item prev me-auto">
+            <a href="..">Return to {{ page.category | capitalize }} Projects</a>
+          </div>
+        {% endif %}
         <br/>
         {% if next_work %}
           <div class="page-item next ms-auto">
-            <a href="{{ next_work.url }}">Next Project<br /> {{ next_work.title }}</a>
+            <a href="{{ next_work.url }}">Next Project<!--<br /> {{ next_work.title }}--></a>
+          </div>
+        {% else %}
+          <div class="page-item next ms-auto">
+            <a href="..">Return to {{ page.category | capitalize }} Projects</a>
           </div>
         {% endif %}
       </div>
       <div class="work-line-sep"></div><hr class="work-line-sep" />
+      <div class="work-content-end-spacer"></div>
       <div class="end-card">
         <a href="#">
           <img class="finger-up" src="/assets/finger.webp" />

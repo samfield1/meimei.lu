@@ -284,7 +284,7 @@ body.works-page .top-links {
   position: relative;
   z-index: 30;
   color: #545454;
-  font: 400 36px "Romana", serif;
+  font: 400 26px "Romana", serif;
   text-align: left;
   margin-left: 100px;
   padding-bottom: 45px;
@@ -292,8 +292,7 @@ body.works-page .top-links {
 
 /* Works page */
 body.works-page {
-  background-image: url("/assets/fabric-burned.webp");
-  background-size: 100px;
+  background-color: #fbf3ea;
 }
 
 body.works-page h1 {
@@ -304,11 +303,12 @@ body.works-page h1 {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin-bottom: 100px;
 }
 
 .back-btn {
   margin: 15px 5px;
-  height: 75px;
+  height: 100px;
 }
 
 .back-btn a {
@@ -345,11 +345,15 @@ body.works-page h1 {
 .works-category-title {
   color: #50566A;
   font-family: Romana;
-  font-size: 32px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   margin-right: 10px;
+}
+
+.works-category-img-container {
+  margin-bottom: 100px;
 }
 
 .works-category-img-container img {
@@ -388,7 +392,7 @@ body.works-page h1 {
 
 /* Works category pages */
 .works-heading-spacer {
-  height: 100px;
+  height: 25px;
 }
 
 .works-img-container {
@@ -451,6 +455,10 @@ body.works-page h1 {
   overflow: hidden;
 }
 
+.work-content-end-spacer {
+  height: 50px;
+}
+
 div.work-line-sep {
   display: block;
   height: 2px;
@@ -481,7 +489,7 @@ hr.work-line-sep {
   color: #373B4B;
   text-align: center;
   font-family: "Romana";
-  font-size: 26px;
+  font-size: 32px;
   font-style: normal;
   line-height: normal;
   font-weight: 500;
@@ -493,7 +501,7 @@ hr.work-line-sep {
   color: #373B4B;
   text-align: center;
   font-family: "Romana";
-  font-size: 26px;
+  font-size: 32px;
   font-style: normal;
   line-height: normal;
   font-weight: 500;
