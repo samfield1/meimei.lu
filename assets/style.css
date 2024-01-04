@@ -182,11 +182,9 @@ body.works-page .top-links {
 /* Mobile styling rules */
 @media (max-width: 576px) {
   .bg-img-container {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+    height: auto;
   }
-  .bg-img {width: 250%;}
+  .bg-img {width: 400%;}
 }
 
 
@@ -324,26 +322,29 @@ body.works-page .top-links {
 
   .about-me-frame {
     width: 80%;
+    height: auto;
   }
 
   .about-me-body {
-    margin: 15px 50px;
+    margin: 15px 30px;
   }
 
   .polaroid-contact-left {
     height: 200px;
     left: calc(50% - 160px);
-    top: calc(5%);
+    top: calc(8%);
   }
 
   .polaroid-contact-right {
     height: 200px;
     left: calc(50% - 15px);
-    top: calc(5% + 30px);
+    top: calc(8% + 30px);
   }
 
   .contact-body {
-    margin: 40px 60px;
+    margin: 0;
+    padding: 20px 0 60px;
+    text-align: center;
   }
 }
 

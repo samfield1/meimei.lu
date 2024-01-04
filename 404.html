@@ -1,31 +1,42 @@
 ---
 title: "Page Not Found"
 permalink: /404.html
-layout: default
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
-<!-- No more not found pages! Cheeky cheeky
-<script>
-  history.back()
-</script>
--->
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  {% include head.html %}
+  <style type="text/css" media="screen">
+    .container {
+      margin: 10px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+    h1 {
+      margin: 15px 0;
+      font-size: 4em;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+  </style>
+  <script>
+    function goBack(){
+    history.back()
+    }
+  </script>
+  <body class="works-page">
+    {% assign logo = "MEIMEI LU" %}
+    {% include header.html %}
+    <main>
+      <div class="container">
+        <h1>404</h1>
+      
+        <p><strong>Page not found :(</strong></p>
+        <p>The requested page could not be found.</p>
+        <p><a onclick="goBack()">Click here to go back</a></p>
+      </div>
+    </main>
+    <footer>
+      <div class="line-sep"></div>
+    </footer>
+  </body>
+</html>
