@@ -164,6 +164,10 @@ body.works-page .top-links {
     display: none;
   }
   body.main-page .m-cover-0 {left: 128px;}
+  /* quick hack so I don't have to change the logo size due 
+   * to a holdover from when the logo was wide everywhere */
+  .meimei-lu-0, .meimei-lu-1, .meimei-lu-2 {z-index: 10;}
+  .about, .contact {z-index: 20;}
 }
 
 
@@ -174,6 +178,16 @@ body.works-page .top-links {
 /* Global */
 .bg-img-container {position: relative;}
 .bg-img {width: 100%;}
+
+/* Mobile styling rules */
+@media (max-width: 576px) {
+  .bg-img-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .bg-img {width: 250%;}
+}
 
 
 /* Main page */
@@ -290,8 +304,47 @@ body.works-page .top-links {
 }
 
 /* Mobile styling rules */
-@media (min-width: 576px) {
-  
+@media (max-width: 576px) {
+  .polaroid-container {
+    width: 100%;
+    height: 250px;
+  }
+
+  .polaroid-about-left {
+    height: 200px;
+    left: calc(50% - 145px);
+    top: 5%
+  }
+
+  .polaroid-about-right {
+    height: 200px;
+    left: calc(50% - 25px);
+    top: calc(5% + 30px);
+  }
+
+  .about-me-frame {
+    width: 80%;
+  }
+
+  .about-me-body {
+    margin: 15px 50px;
+  }
+
+  .polaroid-contact-left {
+    height: 200px;
+    left: calc(50% - 160px);
+    top: calc(5%);
+  }
+
+  .polaroid-contact-right {
+    height: 200px;
+    left: calc(50% - 15px);
+    top: calc(5% + 30px);
+  }
+
+  .contact-body {
+    margin: 40px 60px;
+  }
 }
 
 /* Works page */
