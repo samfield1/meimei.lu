@@ -1,0 +1,36 @@
+{% if logo == null %}
+{% assign logo = "ML" %}
+{% endif %}
+<header>
+    <div class="desktop-header">
+      <div class="top-links">
+        <div class="about"><a href="/about">About</a></div>
+        <div class="meimei-lu-logo">
+          <a href="/">
+            <div class="meimei-lu-0">{{logo}}</div>
+            <div class="meimei-lu-1">{{logo}}</div>
+            <div class="meimei-lu-2">{{logo}}</div>
+          </a>
+          <div class="m-cover-0"></div>
+          <div class="m-cover-1"></div>
+        </div>
+        <div class="contact"><a href="/contact">Contact</a></div>
+      </div>
+    </div>
+    <div class="mobile-header">
+      <div class="top-links">
+        <div class="about"><a href="/about">About</a></div>
+        <div class="meimei-lu-logo">
+          <a href="/">
+            <div class="meimei-lu-0">ML</div>
+            <div class="meimei-lu-1">ML</div>
+            <div class="meimei-lu-2">ML</div>
+          </a>
+          <div class="m-cover-0"></div>
+          <div class="m-cover-1"></div>
+        </div>
+        <div class="contact"><a href="/contact">Contact</a></div>
+      </div>
+    </div>
+    <div class="line-sep"></div>
+  </header>

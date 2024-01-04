@@ -143,6 +143,30 @@ body.works-page .top-links {
   background-color: #50566A;
 }
 
+.mobile-header {
+  display: none;
+}
+
+.mobile-header .about {
+  left: 20%;
+}
+
+.mobile-header .contact {
+  left: 80%;
+}
+
+/* Mobile styling rules */
+@media (max-width: 576px) {
+  .mobile-header {
+    display: block;
+  }
+  .desktop-header {
+    display: none;
+  }
+  body.main-page .m-cover-0 {left: 128px;}
+}
+
+
 /***********
 *** MAIN ***
 ***********/
@@ -263,6 +287,11 @@ body.works-page .top-links {
   text-align: left;
   margin: 90px 0 0 150px;
   padding-bottom: 45px;
+}
+
+/* Mobile styling rules */
+@media (min-width: 576px) {
+  
 }
 
 /* Works page */

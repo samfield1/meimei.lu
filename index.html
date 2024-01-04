@@ -5,22 +5,8 @@ title: null
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   {% include head.html %}
   <body class="main-page">
-    <header>
-      <div class="top-links">
-        <div class="about"><a href="/about">About</a></div>
-        <div class="meimei-lu-logo">
-          <a href="/">
-            <div class="meimei-lu-0">MEIMEI LU</div>
-            <div class="meimei-lu-1">MEIMEI LU</div>
-            <div class="meimei-lu-2">MEIMEI LU</div>
-          </a>
-          <div class="m-cover-0"></div>
-          <div class="m-cover-1"></div>
-        </div>
-        <div class="contact"><a href="/contact">Contact</a></div>
-      </div>
-      <div class="line-sep"></div>
-    </header>
+    {% assign logo = "MEIMEI LU" %}
+    {% include header.html %}
     <main>
       <div class="bg-img-container">
         <img class="bg-img" src="/assets/wayfarer-bg.webp" />
