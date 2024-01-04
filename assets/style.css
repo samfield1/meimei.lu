@@ -218,43 +218,20 @@ body.works-page .top-links {
 
 .about-me-frame {
   text-align: center;
-  background-color: #fbf3ea;
   border-radius: 20px;
   width: 535px;
+  height: 600px;
   margin: auto;
-  z-index: 10;
-}
-
-.about-me-bg {
-  position: relative;
-}
-
-.about-me-bg:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  background: url("/assets/fabric.webp"), lightgray 25%;
-  background-size: 200%;
-  border-radius: 20px;
-  mix-blend-mode: color-burn;
-  z-index: 20;
+  background: #fbf3ea;
 }
 
 .about-me-title {
-  position: relative;
-  z-index: 30;
   color: #545454;
   font: 400 36px "Romana", serif;
   padding: 55px 0 30px 0;
 }
 
 .about-me-body {
-  position: relative;
-  z-index: 30;
   color: #545454;
   font: 400 16px "Alata", sans-serif;
   margin: 15px 83px;
@@ -281,12 +258,10 @@ body.works-page .top-links {
 }
 
 .contact-body {
-  position: relative;
-  z-index: 30;
   color: #545454;
   font: 400 26px "Romana", serif;
   text-align: left;
-  margin-left: 100px;
+  margin: 90px 0 0 150px;
   padding-bottom: 45px;
 }
 
