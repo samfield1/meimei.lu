@@ -47,4 +47,10 @@
       </div>
     </main>
   </body>
+  <script>
+    // patch for stupid chrome letter spacing
+    if (navigator.appVersion.indexOf("Chrome/") != -1) {
+      $(".works-caption-type, .works-caption-tags").css("word-spacing", "-3px");
+    }
+    </script>
 </html>
