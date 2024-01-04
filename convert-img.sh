@@ -8,7 +8,7 @@ cd $(dirname $(basename $0))
 if [[ -n $1 ]]; then
     QUALITY=$1
 else
-    QUALITY=95
+    QUALITY=100
 fi
 
 images=$(find assets/og-img/ | grep -E ".*\.(jpg|gif|png|jpeg)$")
