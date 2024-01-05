@@ -183,6 +183,7 @@ body.works-page .top-links {
 @media (max-width: 576px) {
   .bg-img-container {
     height: auto;
+    overflow: hidden;
   }
   .bg-img {width: 400%;}
 }
