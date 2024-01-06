@@ -25,10 +25,10 @@ for (( i = 0; i < images_n; i++ )); do
     out_image=${out_image%.*}.webp
 
     mkdir -p $(dirname $out_image)
-    if [[ -s $out_image && ! $overwrite ]]; then
+    if [[ -s $out_image && $overwrite == false ]]; then
         echo "($((i+1))/$images_n) Skipping $in_image (webp exists)"
     else
-        echo "($((i+1))/$images_n) Coverting $in_image"
+        echo "($((i+1))/$images_n) Converting $in_image"
         cwebp -q $quality $in_image -o $out_image >/dev/null 2>&1
     fi
 done
