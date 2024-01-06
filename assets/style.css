@@ -104,6 +104,16 @@ a {
   margin-top: auto;
 }
 
+.about, .contact {
+  top: 0;
+  transition-property: top;
+  transition-duration: 0.5s;
+}
+
+.about:hover, .contact:hover {
+top: -10px;
+}
+
 
 /* Main page */
 body.main-page {
@@ -205,6 +215,13 @@ body.works-page .top-links {
   left: 50%;
   top: 60px;
   padding: 10px 0;
+  transition-property: color background-color;
+  transition-duration: 0.5s; 
+}
+
+.view-works:hover {
+  color: #97a291;
+  background-color:#fbf3ea;
 }
 
 
