@@ -4,13 +4,18 @@ title: null
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   {% include head.html %}
-  <body class="main-page">
-    {% assign logo = "MEIMEI LU" %}
+  <body class="index-page">
     {% include header.html %}
     <main>
       <div class="bg-img-container">
-        <img class="bg-img" src="/assets/wayfarer-bg.webp" />
-        <a href="works"><div class="view-works animate__animated animate__fadeInLeft">View works</div></a>
+        <img class="index-name" src="/assets/index/name.png" />
+        <div class="index-view-works">
+          <a href="/work">
+            <div class="animate animate__animated animate__fadeInLeft">
+              <img src="assets/index/view-works-btn.png" />
+            </div>
+          </a>
+        </div>
       </div>
     </main>
     {% include footer.html %}

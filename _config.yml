@@ -7,7 +7,6 @@ description: >-
 url: "https://meimei.lu"
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-sitemap
 
@@ -19,8 +18,11 @@ exclude:
   - convert-img.sh
   - CNAME
 
+sass:
+  style: compressed
+
 collections:
-  works:
+  work:
     output: true
 
 permalink: pretty

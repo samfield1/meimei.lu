@@ -1,0 +1,57 @@
+/***********************\
+* WORK CATEGORY STYLING *
+\***********************/
+
+body.work-category-page {
+  background: url('/assets/work/bg-img.png') no-repeat center center / cover;
+}
+
+.work-category-buttons-container {
+  display: flex;
+}
+
+.work-category-button-container {
+  display: inline;
+  flex: 1 1;
+
+}
+
+.work-category-link-container {
+  height: 172px;
+  width: 172px;
+}
+
+.work-category-button {
+  height: 172px;
+  width: 172px;
+}
+
+.work-category-button.selected {
+  background: url('/assets/work/button-selected.png') no-repeat center center / cover;
+}
+
+
+.work-category-button img {
+  width: 64px;
+  height: 56px;
+  display: block;
+  margin: 38px auto 0;
+}
+
+.work-category-button div {
+  margin: 0 auto;
+  color: #3E2B2B;
+  text-align: center;
+  font-family: Fahkwang;
+  font-size: 14px;
+  font-style: normal;
+  //font-weight: 600;
+  line-height: normal;
+}
+
+.work-category-button.selected div {
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 134px;
+}
+

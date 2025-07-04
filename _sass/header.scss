@@ -1,0 +1,77 @@
+/**************\
+* HEADER STYLE *
+\**************/
+$header_height: 80px;
+
+.header {
+  height: calc(#{$header_height} - 2px);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  flex-grow: 10;
+}
+
+.header-logo-sparkle {
+  position: absolute;
+  left: 55px;
+  top: 20px;
+  stroke: #28A5A8;
+}
+
+.header-logo-letter {
+  font-family: "California";
+  color: #28A5A8;
+  text-align: center;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 118.234px;
+  transform: rotate(-3.574deg);
+  padding: 30px 0 0 25px;
+}
+
+.header-links {
+  flex-grow: 1;
+  color: #32AFB2;
+  text-align: center;
+  font-family: Fahkwang;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 37px 8px 0 0;
+}
+
+.header-links ul {
+  list-style: none;
+}
+
+.header-links ul li {
+  display: inline;
+  margin-right: 37px;
+}
+
+.header-end {
+  background: #32AFB2;
+  height: 2px;
+  margin: 0 30px;
+}
+
+/***************\
+* COLOR VARIETY *
+\***************/
+
+.header.layout-about * {
+  color: #DD5870;
+}
+
+.header-end.layout-about {
+  background: #DD5870;
+}
+
+.header.layout-about .header-logo .header-logo-sparkle {
+  stroke: #DD5870;
+}

@@ -1,0 +1,65 @@
+/*********\
+* GLOBALS *
+\*********/
+
+// global style rules
+* {-webkit-font-smoothing: antialiased;}
+
+html, body {
+  margin: 0;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+hr {
+  display: none;
+}
+
+// fonts
+@font-face {
+  font-family: "California";
+  src: url("/assets/fonts/california.ttf");
+}
+
+@font-face {
+  font-family: "Fahkwang";
+  src: url("/assets/fonts/fahkwang-semibold.ttf");
+}
+
+@font-face {
+  font-family: "Filmotype Leader";
+  src: url("/assets/fonts/filmotype-leader.otf");
+}
+
+// variables
+// boostrap breakpoints. These are minimum widths. Always use with (max-width: )
+// style rules for smaller sizes go after rules for larger sizes
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+
+// This background image is used by the index page and the about pages
+.bg-img-container {
+  position: relative;
+  background-image: url('/assets/bg-img.png');
+  background-size: cover;
+  height: calc(100vh - #{$header_height});
+}
+
+.bg-img {
+  width: 100%;
+}
+
+@media (max-width: $sm) {
+  .bg-img-container {
+    height: auto;
+    overflow: hidden;
+  }
+}

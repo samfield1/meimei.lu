@@ -1,0 +1,89 @@
+/*************\
+* ABOUT STYLE *
+\*************/
+
+body.about-page {
+  background-color: #F6E8D8;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-polaroid-container {
+  flex-grow: 6;
+}
+
+.about-me-frame {
+  flex-grow: 6;
+  margin: 41px 53px;
+}
+
+.about-back-arrow {
+  color: #DD5870;
+  margin: 24px 0 0 30px;
+}
+
+.about-back-arrow div {
+  display: inline-block;
+  padding: 10px 0 0 5px;
+  color: #DD5870;
+  text-align: center;
+  font-family: Fahkwang;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.about-polaroid-container {
+  margin: 43px 0 0 102px;
+}
+
+.about-me-frame {
+  background-image: url('/assets/about/frame.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 491px;
+  height: 650px;
+}
+
+.about-me-title {
+  color: #DD5870;
+  text-align: center;
+  font-family: "Filmotype Leader";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 82px 0 0;
+}
+
+.about-me-body {
+  color: #6E5C52;
+  text-align: center;
+  font-family: Fahkwang;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 15px 74px 0;
+}
+
+.about-me-spacer {
+  flex-grow: 4;
+  flex-shrink: 0;
+  flex-basis: 0;
+  max-width: 500px;
+}
+
+.contact-body {
+  color: #6E5C52;
+  text-align: center;
+  font-family: Fahkwang;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.5em;
+  margin: 15px 74px 0;
+}
