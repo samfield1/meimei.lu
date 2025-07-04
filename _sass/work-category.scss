@@ -8,11 +8,13 @@ body.work-category-page {
 
 .work-category-buttons-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .work-category-button-container {
   display: inline;
-  flex: 1 1;
 
 }
 
@@ -24,6 +26,7 @@ body.work-category-page {
 .work-category-button {
   height: 172px;
   width: 172px;
+  padding-top: 38px;
 }
 
 .work-category-button.selected {
@@ -35,7 +38,7 @@ body.work-category-page {
   width: 64px;
   height: 56px;
   display: block;
-  margin: 38px auto 0;
+  margin: 0 auto 0;
 }
 
 .work-category-button div {

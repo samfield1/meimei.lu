@@ -16,7 +16,7 @@
         </a>
       </div>
       <div class="work-category-buttons-container">
-        {% assign categories = site.pages | where: "layout","work-category"  %}
+        {% assign categories = site.pages | where: "layout","work-category" | sort: "priority" %}
         {% for category in categories %}
           {% assign selected = "" %}
           {% assign button_url = "/assets" | append: category.url | append: "button.svg" %}
