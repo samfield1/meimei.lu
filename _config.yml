@@ -19,7 +19,7 @@ exclude:
   - CNAME
 
 sass:
-  style: compressed
+  style: normal;
 
 collections:
   work:

@@ -35,6 +35,11 @@ hr {
   src: url("/assets/fonts/filmotype-leader.otf");
 }
 
+@font-face {
+  font-family: "League Spartan";
+  src: url("/assets/fonts/league-spartan.ttf");
+}
+
 // variables
 // boostrap breakpoints. These are minimum widths. Always use with (max-width: )
 // style rules for smaller sizes go after rules for larger sizes
@@ -62,4 +67,26 @@ $xxl: 1400px;
     height: auto;
     overflow: hidden;
   }
+}
+
+// Back arrow style. This styles all pages except for the about pages.
+.back-arrow {
+  color: #28A5A8;
+  margin: 24px 0 0 65px;
+}
+
+.back-arrow div {
+  display: inline-block;
+  padding: 10px 0 0 5px;
+  color: #28A5A8;
+  text-align: center;
+  font-family: Fahkwang;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.back-arrow svg {
+  fill: #28A5A8;
 }
