@@ -3,29 +3,32 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   {% include head.html %}
-  <body class="work-main-page">
+  <body class="work-page work-main-page">
     {% include header.html %}
     <main>
       <div class="back-btn">
         <a href="/works/{{ page.category }}"><img class="finger-left" src="/assets/finger.webp" /></a>
       </div>
       {{ page.content }}
-      <!-- Pagination links --><!--
+      <!-- Pagination links -->
       <div class="work-content-end-spacer"></div>
       <div class="work-line-sep"></div><hr class="work-line-sep" />
       <div class="pagination">
-        % assign works_all = site.works | where_exp: "work","work.category == page.category" %}
-        % assign works_after = works_all | where_exp: "work","work.priority > page.priority" %}
-        % assign works_after_sorted = works_after | sort: "priority" %}
-        % assign next_work = works_after_sorted[0] %}
-
-        % assign works_before = works_all | where_exp: "work","work.priority < page.priority" %}
-        % assign works_before_sorted = works_before | sort: "priority" | reverse %}
-        % assign prev_work = works_before_sorted[0] %}
+        {% assign work_all = site.work | where_exp: "work","work.category == page.category" %}
+        {% assign work_after = work_all | where_exp: "work","work.priority > page.priority" %}
+        {% if work_after %}
+          {% assign work_after_sorted = work_after | sort: "priority" %}
+          {% assign next_work = work_after_sorted[0] %}
+        {% endif %}
+        {% assign work_before = work_all | where_exp: "work","work.priority < page.priority" %}
+        {% if work_before %}
+          {% assign work_before_sorted = work_before | sort: "priority" | reverse %}
+          {% assign prev_work = work_before_sorted[0] %}
+        {% endif %}
 
         {% if prev_work %}
           <div class="page-item prev me-auto">
-            <a href="{{ prev_work.url }}">Previous Project<!--<br /> {{ prev_work.title }}--></a><!--
+            <a href="{{ prev_work.url }}">Previous Project {{ prev_work.title }}</a>
           </div>
         {% else %}
           <div class="page-item prev me-auto">
@@ -35,7 +38,7 @@
         <br/>
         {% if next_work %}
           <div class="page-item next ms-auto">
-            <a href="{{ next_work.url }}">Next Project<!--<br /> {{ next_work.title }}--></a>
+            <a href="{{ next_work.url }}">Next Project<br /> {{ next_work.title }}</a>
           </div>
         {% else %}
           <div class="page-item next ms-auto">
@@ -51,6 +54,6 @@
         </a>
       </div>
     </main>
-    {% include footer.html %}
+    {% include header.html %}
   </body>
-</html>-->
+</html>

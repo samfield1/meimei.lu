@@ -3,10 +3,6 @@
 \***********************/
 
 body.work-category-page {
-  background-image: url("/assets/work/bg-img-top.png"), url("/assets/work/bg-img-repeat.png");
-  background-repeat: no-repeat, repeat;
-  background-position: top center, top center;
-  background-size: 100% auto, 100% auto;
 }
 
 .work-category-buttons-container {
@@ -61,14 +57,14 @@ body.work-category-page {
   width: 134px;
 }
 
-.work-img-container {
+.work-category-img-container {
   background: url('/assets/work/work-mockup-box.png') no-repeat center center / cover;
   border-radius: 8px;
   box-shadow: 25px 46px 10px 0px rgba(139, 125, 106, 0.27);
   padding: 4% 0;
 }
 
-.work-cover-img {
+.work-category-cover-img {
   border-radius: 4px;
   background: #3A433D;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -78,11 +74,11 @@ body.work-category-page {
   display: block;
 }
 
-.work-caption {
+.work-category-caption {
   margin-top: 66px;
 }
 
-.work-caption-title {
+.work-category-caption-title {
   color: #3E2B2B;
   font-family: Fahkwang;
   font-size: 24px;
@@ -91,18 +87,18 @@ body.work-category-page {
   line-height: normal;
 }
 
-.work-caption-arrow {
+.work-category-caption-arrow {
   margin-left: 15px;
 }
 
-.work-caption-separator {
+.work-category-caption-separator {
   margin: 2px auto 7px;
   background: #342121;
   height: 1px;
   width: 100%;
 }
 
-.work-caption-subtitle {
+.work-category-caption-subtitle {
   color: #3E2B2B;
   font-family: "League Spartan";
   font-size: 20px;

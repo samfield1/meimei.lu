@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   {% include head.html %}
-  <body class="work-category-page">
+  <body class="work-page work-category-page">
     {% include header.html %}
     <main>
       <div class="back-arrow">
@@ -45,15 +45,15 @@
             {% if item.url contains selected_category %}
               <div class="col-md-4">
                 <a href="{{ item.url }}">
-                  <div class="work-img-container">
-                    <img class="work-cover-img" src="/assets{{ item.url }}cover.png" />
+                  <div class="work-category-img-container">
+                    <img class="work-category-cover-img" src="/assets{{ item.url }}cover.png" />
                   </div>
-                  <div class="work-caption">
-                    <div class="work-caption-title-container">
-                      <span class="work-caption-title">{{ item.title }}</span><span class="work-caption-arrow"><img src="/assets/work/work-caption-arrow.svg"/></span>
+                  <div class="work-category-caption">
+                    <div class="work-category-caption-title-container">
+                      <span class="work-category-caption-title">{{ item.title }}</span><span class="work-caption-arrow"><img src="/assets/work/work-caption-arrow.svg"/></span>
                     </div>
-                    <div class="work-caption-separator"></div>
-                    <div class="work-caption-subtitle">{{ item.subtitle}}</div>
+                    <div class="work-category-caption-separator"></div>
+                    <div class="work-category-caption-subtitle">{{ item.subtitle}}</div>
                   </div>
                 </a>
               </div>

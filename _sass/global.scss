@@ -69,6 +69,15 @@ $xxl: 1400px;
   }
 }
 
+// This sets up the background image for work-category and work-main pages
+body.work-page {
+  background-image: url("/assets/work/bg-img-top.png"), url("/assets/work/bg-img-repeat.png");
+  background-repeat: no-repeat, repeat;
+  background-position: top center, top center;
+  background-size: 100% auto, 100% auto;
+}
+
+
 // Back arrow style. This styles all pages except for the about pages.
 .back-arrow {
   color: #28A5A8;
