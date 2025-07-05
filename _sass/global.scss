@@ -40,6 +40,48 @@ hr {
   src: url("/assets/fonts/league-spartan.ttf");
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/poppins-regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/poppins-italic.ttf");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/poppins-semibold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/poppins-semibolditalic.ttf");
+  font-style: italic;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/poppins-bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/poppins-bolditalic.ttf");
+  font-style: italic;
+  font-weight: 700;
+}
+
 // variables
 // boostrap breakpoints. These are minimum widths. Always use with (max-width: )
 // style rules for smaller sizes go after rules for larger sizes
@@ -81,7 +123,7 @@ body.work-page {
 // Back arrow style. This styles all pages except for the about pages.
 .back-arrow {
   color: #28A5A8;
-  margin: 24px 0 0 65px;
+  margin: 24px 0 -60px 65px;
 }
 
 .back-arrow div {

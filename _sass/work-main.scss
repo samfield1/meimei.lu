@@ -2,4 +2,119 @@
 * WORK MAIN STYLING *
 \*******************/
 
+.work-main-page main {
+  background-color: #FBF3EA;
+}
 
+.work-main-page main * {
+  color: #000;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.68px;
+}
+
+// Because the back arrow is in <main>,
+// it has to be excluded from the global page style
+// Also, this fixes the background issue which
+// negative margin causes on this page
+.work-main-page .back-arrow {
+  color: #28A5A8;
+  margin: auto auto 0 65px;
+  padding: 25px 0 65px;
+}
+
+.work-main-page .back-arrow div {
+  display: inline-block;
+  padding: 10px 0 0 5px;
+  color: #28A5A8;
+  text-align: center;
+  font-family: Fahkwang;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.work-main-page h1,
+.work-main-page h2,
+.work-main-page h3 {
+  color: #000;
+  font-family: "California";
+  line-height: normal;
+}
+
+.work-main-page h1 {
+  font-size: 64px;
+}
+
+.work-main-page h2 {
+  font-size: 40px;
+}
+
+.work-main-page h3 {
+  font-size: 32px;
+}
+
+.work-main-page span.sb {
+  font-weight: 600;
+}
+
+.work-page-spacer {
+  height: 80px;
+}
+
+.work-type-container {
+  margin: 46px auto 36px;
+  text-align: right;
+}
+
+.work-year-container {
+  text-align: right;
+}
+
+.work-content-end-spacer {
+  height: 80px;
+}
+
+.work-line-sep {
+  margin: 0 auto;
+  width: 66%;
+  height: 2px;
+  background: #000;
+}
+
+.work-contact-container {
+  margin: 150px auto 120px;
+  text-align: center;
+}
+
+.work-contact-container p {
+  margin: 35px auto 0;
+  width: 50%;
+}
+
+.work-return {
+  margin: 30px auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.work-return h3 {
+  display: inline;
+  margin-right: 20px;
+}
+
+.work-main-footer {
+  border-top: 1px solid #1E9B9E;
+  border-bottom: 1px solid #1E9B9E;
+  display: flex;
+  flex-wrap: wrap;
+  height: 115px;
+  background-image: url("/assets/work/bg-img-footer.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  margin-bottom: 20px;
+}

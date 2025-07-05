@@ -13,8 +13,14 @@ $header_height: 80px;
   flex-grow: 10;
 }
 
+.header-logo-sparkle-container {
+  height: 0;
+  width: 0;
+  positon: absolute;
+}
+
 .header-logo-sparkle {
-  position: absolute;
+  position: relative;
   left: 55px;
   top: 20px;
   stroke: #28A5A8;

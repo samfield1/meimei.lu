@@ -6,54 +6,82 @@
   <body class="work-page work-main-page">
     {% include header.html %}
     <main>
-      <div class="back-btn">
-        <a href="/works/{{ page.category }}"><img class="finger-left" src="/assets/finger.webp" /></a>
-      </div>
-      {{ page.content }}
-      <!-- Pagination links -->
-      <div class="work-content-end-spacer"></div>
-      <div class="work-line-sep"></div><hr class="work-line-sep" />
-      <div class="pagination">
-        {% assign work_all = site.work | where_exp: "work","work.category == page.category" %}
-        {% assign work_after = work_all | where_exp: "work","work.priority > page.priority" %}
-        {% if work_after %}
-          {% assign work_after_sorted = work_after | sort: "priority" %}
-          {% assign next_work = work_after_sorted[0] %}
-        {% endif %}
-        {% assign work_before = work_all | where_exp: "work","work.priority < page.priority" %}
-        {% if work_before %}
-          {% assign work_before_sorted = work_before | sort: "priority" | reverse %}
-          {% assign prev_work = work_before_sorted[0] %}
-        {% endif %}
-
-        {% if prev_work %}
-          <div class="page-item prev me-auto">
-            <a href="{{ prev_work.url }}">Previous Project {{ prev_work.title }}</a>
-          </div>
-        {% else %}
-          <div class="page-item prev me-auto">
-            <a href="..">Return to {{ page.category | capitalize }} Projects</a>
-          </div>
-        {% endif %}
-        <br/>
-        {% if next_work %}
-          <div class="page-item next ms-auto">
-            <a href="{{ next_work.url }}">Next Project<br /> {{ next_work.title }}</a>
-          </div>
-        {% else %}
-          <div class="page-item next ms-auto">
-            <a href="..">Return to {{ page.category | capitalize }} Projects</a>
-          </div>
-        {% endif %}
-      </div>
-      <div class="work-line-sep"></div><hr class="work-line-sep" />
-      <div class="end-card">
-        <a href="#">
-          <img class="finger-up" src="/assets/finger.webp" />
-          <h1>BACK TO TOP</h1>
+      <div class="back-arrow">
+        <a href="/">
+          <svg width="24" height="11" viewBox="0 0 24 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.07628 0.57613C6.07626 0.462176 6.04245 0.350787 5.97913 0.256045C5.9158 0.161304 5.82582 0.087463 5.72053 0.0438579C5.61525 0.0002528 5.49941 -0.0111589 5.38764 0.0110658C5.27587 0.0332905 5.17321 0.0881535 5.09262 0.168719L0.169128 5.0922C0.0621968 5.20049 0.00245074 5.34668 0.00293282 5.49887C0.0034149 5.65105 0.064086 5.79687 0.171701 5.90448C0.279315 6.01209 0.425133 6.07275 0.577319 6.07323C0.729505 6.07371 0.875699 6.01395 0.983984 5.90702L5.90746 0.983564C5.96105 0.930123 6.00356 0.866617 6.03253 0.796696C6.0615 0.726774 6.07637 0.651816 6.07628 0.57613Z" />
+            <path d="M23.7141 5.50008C23.7142 5.42439 23.6993 5.34944 23.6703 5.27951C23.6414 5.20957 23.599 5.14603 23.5454 5.09251C23.4919 5.03899 23.4284 4.99655 23.3584 4.9676C23.2885 4.93866 23.2136 4.92378 23.1379 4.92383L0.576204 4.92383C0.462238 4.92383 0.350832 4.95762 0.256075 5.02094C0.161317 5.08426 0.0874634 5.17425 0.043854 5.27954C0.000244719 5.38484 -0.0111616 5.50069 0.0110773 5.61247C0.0333163 5.72424 0.0882018 5.82691 0.168793 5.90749L5.09225 10.831C5.14575 10.8845 5.20927 10.9269 5.27918 10.9559C5.34909 10.9849 5.42401 10.9998 5.49968 10.9998C5.57534 10.9998 5.65027 10.9849 5.72018 10.9559C5.79008 10.9269 5.8536 10.8845 5.90711 10.831C5.96061 10.7775 6.00305 10.714 6.03201 10.6441C6.06097 10.5742 6.07587 10.4992 6.07587 10.4236C6.07587 10.3479 6.06096 10.273 6.03201 10.2031C6.00305 10.1332 5.96061 10.0696 5.9071 10.0161L1.96731 6.07633L23.1379 6.07633C23.2136 6.07638 23.2885 6.0615 23.3584 6.03256C23.4284 6.00361 23.4919 5.96117 23.5454 5.90765C23.599 5.85413 23.6414 5.79059 23.6703 5.72066C23.6993 5.65072 23.7142 5.57577 23.7141 5.50008Z" />
+          </svg>
+          <div>Back</div>
         </a>
       </div>
+      <div class="work-page-spacer"></div>
+      <div class="container gx-2">
+        <div class="row gx-2 justify-center-content">
+          <div class="col-md-7 work-title-container">
+            <div class="work-title"><h2>{{ page.title }}</h2></div>
+            <div class="work-description">{{ page.description }}</div>
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-3">
+            <div class="work-type-container">
+              <div class="work-type-title"><b>PROJECT TYPE</b></div>
+              <div class="work-type">{{ page.type }}</div>
+            </div>
+            <div class="work-year-container">
+                  <div class="work-year-title"><b>YEAR</b></span></div>
+              <div class="work-year">{{ page.year }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ page.content }}
+      <div class="work-content-end-spacer"></div>
+      <div class="work-line-sep"></div><hr class="work-line-sep" />
+      <div class="work-contact-container">
+        <h1>Contact Me</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+      </div>
+      <!-- Pagination links -->
+      <div class="pagination mx-4">
+        {% assign work_all = site.work | where_exp: "work","work.category == page.category" %}
+        {% assign work_after = work_all | where_exp: "work","work.priority > page.priority" %}
+        {% assign work_after_sorted = work_after | sort: "priority" %}
+        {% assign next_work = work_after_sorted[0] %}
+        {% assign work_before = work_all | where_exp: "work","work.priority < page.priority" %}
+        {% assign work_before_sorted = work_before | sort: "priority" | reverse %}
+        {% assign prev_work = work_before_sorted[0] %}
+
+        <div class="page-item prev me-auto">
+          {% if prev_work %}<a href="{{ prev_work.url }}"><img src="/assets/work/button-prev.png"/></a>{% endif %}
+        </div>
+        <a href="#">
+          <span class="work-return"><h3>Back to Top</h3><img src="/assets/work/up-arrow.svg"/></span>
+        </a>
+        
+        <div class="page-item next ms-auto">
+          {% if next_work %}<a href="{{ next_work.url }}"><img src="/assets/work/button-next.png"/></a>{% endif %}
+        </div>
+        
+      </div>
     </main>
-    {% include header.html %}
+    <footer>
+      <div class="work-main-footer">
+        <div class="header-logo">
+          <div class="header-logo-sparkle-container">
+            <svg class="header-logo-sparkle" width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 4.14648C5.70307 5.20115 5.28767 6.16212 4.77246 6.98438C4.07426 8.09861 3.16284 8.99781 2.10059 9.49609C3.167 9.99555 4.07989 10.9008 4.7793 12.0205C5.29127 12.8402 5.7055 13.7966 6.00098 14.8467C6.29643 13.7972 6.70896 12.8408 7.2207 12.0215C7.92003 10.9019 8.83314 9.99754 9.89941 9.49805C8.83364 8.99862 7.91987 8.09553 7.2207 6.97656C6.70809 6.15612 6.29565 5.19774 6 4.14648Z" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="header-logo-letter">M</div>
+        </div>
+        <div class="header-links">
+          <ul>
+            <li><a href="/work">Work</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+    </footer>
   </body>
 </html>
