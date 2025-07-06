@@ -96,8 +96,10 @@ $xxl: 1400px;
 .bg-img-container {
   position: relative;
   background-image: url('/assets/bg-img.png');
-  background-size: cover;
-  height: calc(100vh - #{$header_height});
+  background-size: 100% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: calc(100vh - calc( 1 * #{$header_height} ));
 }
 
 .bg-img {
