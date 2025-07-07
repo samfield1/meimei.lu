@@ -9,7 +9,7 @@
 .work-main-page main * {
   color: #000;
   font-family: Poppins;
-  font-size: 17px;
+  font-size: 16px;
   line-height: normal;
   letter-spacing: 0.68px;
 }
@@ -41,7 +41,7 @@
 .work-main-page h3 {
   color: #000;
   font-family: "California";
-  line-height: normal;
+  line-height: 1.6em;
 }
 
 .work-main-page h1 {
@@ -58,6 +58,11 @@
 
 .work-main-page span.sb {
   font-weight: 600;
+}
+
+.work-main-page .caption-text,
+.work-main-page .caption-text * {
+  font-size: 14px;
 }
 
 .work-main-page img {
