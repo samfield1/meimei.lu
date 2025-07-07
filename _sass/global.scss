@@ -95,11 +95,12 @@ $xxl: 1400px;
 // This background image is used by the index page and the about pages
 .bg-img-container {
   position: relative;
-  background-image: url('/assets/bg-img.png');
+  background-image: url('/assets/bg-img-cropped.png');
   background-size: 100% auto;
   background-position: bottom center;
   background-repeat: no-repeat;
-  height: calc(100vh - calc( 1 * #{$header_height} ));
+  height: calc(100vh - #{$header_height} + 1px);
+  overflow: auto;
 }
 
 .bg-img {
