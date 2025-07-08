@@ -7,11 +7,17 @@
 }
 
 .work-main-page main * {
-  color: #000;
+  color: #735142;
   font-family: Poppins;
   font-size: 16px;
   line-height: normal;
   letter-spacing: 0.68px;
+}
+
+.ml-border-1 {
+  border-color: #735142;
+  border-style: solid;
+  border-width: 1px;
 }
 
 // Because the back arrow is in <main>,
@@ -39,7 +45,7 @@
 .work-main-page h1,
 .work-main-page h2,
 .work-main-page h3 {
-  color: #000;
+  color: #735142;
   font-family: "California";
   line-height: 1.6em;
 }
@@ -66,6 +72,10 @@
 }
 
 .work-main-page img {
+  width: 100%;
+}
+
+.work-main-page video {
   width: 100%;
 }
 
