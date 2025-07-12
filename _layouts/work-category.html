@@ -40,7 +40,8 @@
       </div>
       <div class="container gx-5">
         <div class="row gx-5">
-          {% for item in site.work %}
+          {% assign work = site.work | sort: "priority" %}
+          {% for item in work %}
             {{ item.name }}
             {% if item.url contains selected_category %}
               <div class="col-md-4">
