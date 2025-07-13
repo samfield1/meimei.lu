@@ -3,10 +3,90 @@ layout: work-main
 priority: 40
 
 title: The Virgin Islander
-subtitle: Sneed's Feed and Seed
-year: 2024-2025
-type: Chuck's
+subtitle: Lifetsyle Magazine Project
+year: 2023
+type: Lifestyle Magazine Project
 description: >
-  I am a lao shu
+  The Virgin Islander is a fictional lifestyle magazine about life and love on the U.S. Virgin Islands, and this particular issue focuses on characters from the novel “Land of Love and Drowning” by Tiphanie Yanique. The character names and storylines are entirely from the book, and this magazine brings that story to life. 
 ---
-<div class="p-5 m-5">The sign is a subtle joke. The shop is called "Sneed's Feed & Seed", where feed and seed both end in the sound "-eed", thus rhyming with the name of the owner, Sneed. The sign says that the shop was "Formerly Chuck's", implying that the two words beginning with "F" and "S" would have ended with "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would have been called "Chuck's Fuck and Suck".</div>
+{% assign dir = page.url | split: '.' | first %}
+{% assign last_char = dir | slice: -1 %}
+{% if last_char == '/' %}
+  {% assign end = dir.size | minus: 1 %}
+  {% assign dir = dir | slice: 0, end %}
+{% endif %}
+{% assign picture_folder = "/assets" | append: dir %}
+
+<div class="container p-5">
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-5 mb-5 pb-5">
+    <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg1.png"/>
+    </div>
+     <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg2.png"/>
+    </div>
+    <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg3.png"/>
+    </div>
+    </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Finding the Photos</h2>
+      <div>One of the fun challenges of this magazine was to find models to represent the characters from the novel. The novel has not been adapted into a movie or a TV series, so it was completely up to me to find models who matched their description. I scoured social media platforms to find models, looked through all of their available photoshoots, and I ended up lucking out with the content I found.</div>
+    </div>
+    <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg4.png"/>
+    </div>
+      <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg5.png"/>
+    </div>
+     </div>
+
+    <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Writing the Content</h2>
+      <div>Since this is a lifestyle magazine, I followed a popular format found in those types of magazines, which is that the feature article is of an interviewer asking questions to a celebrity. In this case, the fictional interviewer is interviewing the main character of Land of Love and Drowning, Anette Bradshaw.</div>
+    </div>
+    <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg6.png"/>
+    </div>
+      <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg7.png"/>
+    </div>
+    <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg8.png"/>
+    </div>
+      <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg9.png"/>
+    </div>
+      <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg10.png"/>
+    </div>
+     </div>
+
+<div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Other Required Sections</h2>
+      <div>The project also required for us to design a full-spread advertisement, write a one-page article, and design a back-cover advertisement.</div>
+    </div>
+    <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg11.png"/>
+    </div>
+      <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg12.png"/>
+    </div>
+    <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg13.png"/>
+    </div>
+     </div>
+
+
+      </div>

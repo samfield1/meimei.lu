@@ -3,10 +3,46 @@ layout: work-main
 priority: 30
 
 title: Illustrations
-subtitle: Sneed's Feed and Seed
-year: 2024-2025
-type: Chuck's
+subtitle: N/A
+year: N/A
+type: N/A
 description: >
-  I am a lao shu
+  Drawing is something I’ve been doing since I was a child — but I began learning digital art in the past year to create pieces dedicated to my favorite characters from media. I also love utilizing graphic design principles such as typography and graphic elements in my drawings wherever I can. I believe the combination of graphic design and traditional illustration create an eye-catching and punchy outcome, which is what I strive for in my art pieces! I have all of these posted on my art account @castorcaesar (on Tumblr and Instagram).
+
 ---
-<div class="p-5 m-5">The sign is a subtle joke. The shop is called "Sneed's Feed & Seed", where feed and seed both end in the sound "-eed", thus rhyming with the name of the owner, Sneed. The sign says that the shop was "Formerly Chuck's", implying that the two words beginning with "F" and "S" would have ended with "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would have been called "Chuck's Fuck and Suck".</div>
+
+{% assign dir = page.url | split: '.' | first %}
+{% assign last_char = dir | slice: -1 %}
+{% if last_char == '/' %}
+  {% assign end = dir.size | minus: 1 %}
+  {% assign dir = dir | slice: 0, end %}
+{% endif %}
+{% assign picture_folder = "/assets" | append: dir %}
+
+<div class="container p-5">
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+   <div class="row justify-content-center my-5">
+    <div class="col-md-5 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img1-cropped.png"/>
+    </div>
+      <div class="col-md-5 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img2-cropped.png"/>
+    </div>
+    <div class="col-md-5 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img3-cropped.png"/>
+    </div>
+      <div class="col-md-5 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img4-cropped.png"/>
+    </div>
+      <div class="col-md-5 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img5-cropped.png"/>
+    </div>
+     </div>
+
+</div>

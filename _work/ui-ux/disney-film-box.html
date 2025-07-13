@@ -3,10 +3,118 @@ layout: work-main
 priority: 30
 
 title: Disney Film Box
-subtitle: Sneed's Feed and Seed
-year: 2024-2025
-type: Chuck's
+subtitle: App Design
+year: 2023
+type: App project
 description: >
-  I am a lao shu
+  Disney Film Box is an app project where users can review and read others’ reviews of Disney movies. Disney is a good company for this kind of company-specific project due to the sheer amount of movies out there that we don’t always realize are actually Disney movies! Thus, I had a lot of content to work with: Pixar movies, Disney princess movies, Marvel movies, and many more categories. 
 ---
-<div class="p-5 m-5">The sign is a subtle joke. The shop is called "Sneed's Feed & Seed", where feed and seed both end in the sound "-eed", thus rhyming with the name of the owner, Sneed. The sign says that the shop was "Formerly Chuck's", implying that the two words beginning with "F" and "S" would have ended with "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would have been called "Chuck's Fuck and Suck".</div>
+{% assign dir = page.url | split: '.' | first %}
+{% assign last_char = dir | slice: -1 %}
+{% if last_char == '/' %}
+  {% assign end = dir.size | minus: 1 %}
+  {% assign dir = dir | slice: 0, end %}
+{% endif %}
+{% assign picture_folder = "/assets" | append: dir %}
+
+
+<div class="container p-5">
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+  <div class="row justify-content-center g-5 mb-5 pb-5">
+    <div class="col-md-3">
+      <img src="{{picture_folder}}/img1.png"/>
+    </div>
+    <div class="col-md-3">
+      <img src="{{picture_folder}}/img2.png"/>
+    </div>
+    <div class="col-md-3">
+      <img src="{{picture_folder}}/img3.png"/>
+    </div>
+    <div class="col-md-12 mt-2">
+    </div>
+  </div>
+
+    <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mb-5"></div>
+    </div>
+  </div>
+
+<div class="row justify-content-center g-4 mt-5">
+    <div class="col-md-6">
+      <video class="ml-border-1" autoplay loop muted playsinline>
+      <source src="{{picture_folder}}/vid1.webm" type="video/webm"/>
+      </video>
+      <div class="caption-text pt-2 mb-5">Exploring the home page</div>
+    </div>
+    <div class="col-md-5">
+      <h2 class="mt-5 ps-5">Login</h2>
+      <div class="ps-5">When first logging into the app or creating an account, the user is greeted with a still from any Disney movie. The same goes for the home page. In the process of designing the app, I wanted to find a way to include the gorgeous illustrated backgrounds from older Disney movies. I couldn’t figure out another way asides from them being the background of the screen. But since there are an abundance of nonintrusive Disney stills, it ended up being a good way to set the tone for the app as well as showcase the art.</div>
+    </div>
+  </div>
+
+   <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <h2 class="mt-5 pe-5">Home Page</h2>
+      <div class="pe-5 mb-5">The home page consists of a ‘feed’, where the user can view the movie reviews and ratings their friends have written. The friends’ usernames, rating, and review (if applicable) are present underneath a thumbnail of the movie they watched.</div>
+    </div>
+    <div class="col-md-6">
+      <video class="ml-border-1" autoplay loop muted playsinline>
+        <source src="{{picture_folder}}/vid2.webm" type="video/webm"/>
+      </video>
+      <div class="caption-text pt-2 mb-5">Exploring the section page</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5">
+    <div class="col-md-6">
+      <video class="ml-border-1" autoplay loop muted playsinline>
+      <source src="{{picture_folder}}/vid1.webm" type="video/webm"/>
+      </video>
+      <div class="caption-text pt-2 mb-5">Search page</div>
+    </div>
+    <div class="col-md-5">
+      <h2 class="mt-5 ps-5">Search Page</h2>
+      <div class="ps-5">Going to another page also changes the background still. If the still is a bit busy, like the still from Up, the yellow dialog which fades the image out a little ensures that the text is still readable. On the search page, there are categories through which you can browse if you are just leisurely looking.</div>
+    </div>
+  </div>
+
+    <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <h2 class="mt-5 pe-5">Read Reviews</h2>
+      <div class="pe-5 mb-5">An essential part of this app is being able to read the reviews from all users on any given Disney movie. There is also a tab for the user to read only the reviews from people they follow. </div>
+    </div>
+    <div class="col-md-6">
+      <video class="ml-border-1" autoplay loop muted playsinline>
+        <source src="{{picture_folder}}/vid2.webm" type="video/webm"/>
+      </video>
+      <div class="caption-text pt-2 mb-5">Exploring the section page</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5">
+    <div class="col-md-6">
+      <video class="ml-border-1" autoplay loop muted playsinline>
+      <source src="{{picture_folder}}/vid1.webm" type="video/webm"/>
+      </video>
+      <div class="caption-text pt-2 mb-5">Write A Review</div>
+    </div>
+    <div class="col-md-5">
+      <h2 class="mt-5 ps-5">Write A Review</h2>
+      <div class="ps-5">The process for writing a review and contributing the user’s own content into the app is very straightforward. They only need to give the movie a rating out of 5, and the written review is optional. The ‘contains spoilers’ feature is from Letterboxd, which is useful for preventing users from reading spoilers from movies they haven’t seen. </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Profile and Notifications</h2>
+      <div>The user’s profile page is where they can keep track of all the movies they’ve rated, reviews they’ve written, and other contributions or logged items, such as lists and likes. The notification page is where interactions get logged, such as other users liking your review, other users tagging you in a comment, or even just seeing the activity of the friends you follow.</div>
+    </div>
+  </div>
+
+  </div>

@@ -2,11 +2,53 @@
 layout: work-main
 priority: 20
 
-title: Rain Pavillion Teahouse
-subtitle: Sneed's Feed and Seed
-year: 2024-2025
-type: Chuck's
+title: Rain Pavillion Teahouse Menu
+subtitle: Menu Design
+year: 2024
+type: Menu Design
 description: >
-  I am a lao shu
+  A common typographic project I always wanted to try was to design a menu, with an added challenge of including both Chinese and English on it. For this project, I took the menu and name of an existing teahouse in Beijing, China, and redesigned it. This teahouse is one of my favorite places in China, and I wanted to create a menu that reflects its gentle and peaceful atmosphere. 
 ---
-<div class="p-5 m-5">The sign is a subtle joke. The shop is called "Sneed's Feed & Seed", where feed and seed both end in the sound "-eed", thus rhyming with the name of the owner, Sneed. The sign says that the shop was "Formerly Chuck's", implying that the two words beginning with "F" and "S" would have ended with "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would have been called "Chuck's Fuck and Suck".</div>
+{% assign dir = page.url | split: '.' | first %}
+{% assign last_char = dir | slice: -1 %}
+{% if last_char == '/' %}
+  {% assign end = dir.size | minus: 1 %}
+  {% assign dir = dir | slice: 0, end %}
+{% endif %}
+{% assign picture_folder = "/assets" | append: dir %}
+
+<div class="container p-5">
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+   <div class="row justify-content-center g-5 mb-5 pb-5">
+    <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg1.png"/>
+    </div>
+     <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg2.png"/>
+    </div>
+    </div>
+
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Adding in My Illustrations</h2>
+      <div>Before I added in my illustrations, the menu looked almost too clean. It didn’t communicate the lush and soothing interior of the actual teahouse. I did a bit of research on what kinds of plants are common on Chinese porcelain, and decided to draw small persimmon branches.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-5 mb-5 pb-5">
+    <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg3.png"/>
+    </div>
+     <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/Nimg4.png"/>
+    </div>
+    </div>
+
+  </div>

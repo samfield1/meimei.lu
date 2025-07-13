@@ -3,10 +3,92 @@ layout: work-main
 priority: 10
 
 title: Carmen, Carmen
-subtitle: Sneed's Feed and Seed
-year: 2024-2025
-type: Chuck's
+subtitle: Fanzine Project
+year: 2023
+type: Fanzine Project
 description: >
-  I am a lao shu
+  Carmen, Carmen is a fanzine which explores the world of singer and songwriter Lana del Rey. It examines the possibilities of other mediums where Lana del Rey could also showcase her artistry, such as if she were also an author or an actress. The zine contains tailored collages I created for each possibility, which are visual representations of her atmospheric, flowery music. 
 ---
-<div class="p-5 m-5">The sign is a subtle joke. The shop is called "Sneed's Feed & Seed", where feed and seed both end in the sound "-eed", thus rhyming with the name of the owner, Sneed. The sign says that the shop was "Formerly Chuck's", implying that the two words beginning with "F" and "S" would have ended with "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would have been called "Chuck's Fuck and Suck".</div>
+{% assign dir = page.url | split: '.' | first %}
+{% assign last_char = dir | slice: -1 %}
+{% if last_char == '/' %}
+  {% assign end = dir.size | minus: 1 %}
+  {% assign dir = dir | slice: 0, end %}
+{% endif %}
+{% assign picture_folder = "/assets" | append: dir %}
+
+<div class="container p-5">
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+<div class="row justify-content-center g-5 mb-5 pb-5">
+    <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img1.png"/>
+    </div>
+    <div class="col-md-5">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img2edit.png"/>
+    </div>
+    <div class="col-md-5">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img3edit.png"/>
+    </div>
+    </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Zine Concept</h2>
+      <div>I designed a total of four collages for this zine, one for the artist statement spread, and then three others each representing one of her songs. The songs I chose were: Born to DIe, Fine China, and Black Beauty. I decided on using collages as a medium for this zine because I felt that collages are the easiest way to express a vivid and wild imagination.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-5 mb-5 pb-5">
+    <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img4.png"/>
+    </div>
+     </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Born to Die</h2>
+      <div>One of my all-time favorite Lana del Rey songs is Born to Die, a lush, cinematic elegy to a doomed love. In the world this zine explores, Born to Die is a painting too, not just a song. The fictional myth of this painting is that no one knows who painted it, but it depicts Lana del Rey as a goddess amongst the clouds.</div>
+    </div>
+  </div>
+    <div class="row justify-content-center g-5 mb-5 pb-5">
+    <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img5.png"/>
+    </div>
+     <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img6.png"/>
+    </div>
+    </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Fine China</h2>
+      <div>The second exploration uses Lana’s tender and heartbreaking song Fine China, and turns it into a Hollywood film. The song is about a bride whose groom leaves her on the day of their wedding. Thus, the movie is the story behind that.</div>
+    </div>
+    <div class="col-md-8 g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img7.png"/>
+    </div>
+     </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Black Beauty</h2>
+      <div>Black Beauty is a sweeping, grand song about the pain of loving someone who can’t find happiness. This time, instead of Lana herself being the star of the medium, she is the creator. She is the author of a novel about two reunited wartime sweethearts, where the man cannot escape his haunting memories of the war. The woman is left to stand by him and support him, but even she cannot reach where he is.</div>
+    </div>
+    <div class="col-md-8  g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img8.png"/>
+    </div>
+    <div class="col-md-8  g-5 mb-3 ">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img9.png"/>
+    </div>
+     <div class="col-md-8  g-5 mb-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img10.png"/>
+    </div>
+     </div>
+
+  </div>

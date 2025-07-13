@@ -2,11 +2,140 @@
 layout: work-main
 priority: 10
 
-title: BSO
-subtitle: Sneed's Feed and Seed
-year: 2024-2025
-type: Chuck's
+title: Baltimore Symphony Orchestra
+subtitle: Marketing Design, Branding
+year: 2024
+type: Marketing Design
 description: >
-  I am a lao shu
+  In the summer of 2024, I worked as a Graphic Design Intern for the Baltimore Symphony Orchestra as part of their in-house marketing team. I contributed to a variety of marketing collateral for their summer season, including print mailers, key art, magazine advertisements, email headers, and interactive kiosk designs. Collaborating with a team of graphic designers, I adhered to brand guidelines while demonstrating strong attention to detail in typography, spacing, and composition. This experience strengthened my ability to design within an established visual system while still contributing creative solutions.
 ---
-<div class="p-5 m-5">The sign is a subtle joke. The shop is called "Sneed's Feed & Seed", where feed and seed both end in the sound "-eed", thus rhyming with the name of the owner, Sneed. The sign says that the shop was "Formerly Chuck's", implying that the two words beginning with "F" and "S" would have ended with "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would have been called "Chuck's Fuck and Suck".</div>
+{% assign dir = page.url | split: '.' | first %}
+{% assign last_char = dir | slice: -1 %}
+{% if last_char == '/' %}
+  {% assign end = dir.size | minus: 1 %}
+  {% assign dir = dir | slice: 0, end %}
+{% endif %}
+{% assign picture_folder = "/assets" | append: dir %}
+
+
+<div class="container p-5">
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+    <h2>Frozen Concert Print Mailer</h2>
+      <div class="pe-5 mb-5 pt-5">One of the most exciting projects I was in charge of designing was the Frozen in Concert print mailer. This project required a focus on the composition and arrangement of the assets and copy I was given to work with. Typography, hierarchy, and spacing all had an impact on the result. The final product was mailed to all subscribers of BSO.</div>
+    </div>
+    <div class="col-md-4">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img1.png"/>
+      <div class="caption-text pt-2 mb-5"><i>Frozen in Concert</i> Mailer</div>
+    </div>
+  </div>
+
+<div class="row justify-content-center">
+  <div class="col-md-8">
+  <img class="mt-1 ml-border-1" src="{{picture_folder}}/img2.png"/>
+  <div class="caption-text pt-2 mb-5">Back of mailer</div>
+  </div>
+  </div>
+
+<div class="row justify-content-center">
+  <div class="col-md-8">
+  <img class="mt-1 ml-border-1" src="{{picture_folder}}/img3.png"/>
+  <div class="caption-text pt-2 mb-5">Frozen in Concert mailer mockup</div>
+  </div>
+  </div>
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+    <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-4">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img4.png"/>
+      <div class="caption-text pt-2 mb-5"><i>SummerFest</i> IKE Design</div>
+    </div>
+
+    <div class="col-md-5">
+    <h2>Interactive Kiosk Experience Ad</h2>
+      <div class="ps-5 mb-5 pt-5">This project I designed was called an Ike, or an interactive kiosk experience. It was a moving, animated advertisement promoting BSO’s series of summer concerts called SummerFest. The final product was installed into a kiosk and played amongst other ads.</div>
+    </div>
+  </div>
+
+
+  <div class="row justify-content-center">
+  <div class="col-md-8">
+  <img class="mt-1 ml-border-1" src="{{picture_folder}}/img5.png"/>
+  <div class="caption-text pt-2 mb-5"><i>SummerFest</i> IKE Design Horizontal</div>
+  </div>
+  </div>
+
+<div class="row justify-content-center">
+  <div class="col-md-8">
+  <img class="mt-1 ml-border-1" src="{{picture_folder}}/img6.png"/>
+  <div class="caption-text pt-2 mb-5"><i>SummerFest</i> IKE Mockup</div>
+  </div>
+  </div>
+
+
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+    <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+    <h2>Bethesda Magazine Full Page Ad</h2>
+      <div class="pe-5 mb-5 pt-5">This project was a full page ad in the Bethesda Magazine, for the 2024-2025 season of BSO. I was responsible for arranging the photographs that recapped all the categories of concerts BSO had in a season, as well as adhering to branding guidelines and perfecting typography.</div>
+    </div>
+    <div class="col-md-5">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img7.png"/>
+      <div class="caption-text pt-2 mb-5"><i>Bethesda Magazine</i> BSO Full Page Ad</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+  <div class="col-md-8">
+  <img class="mt-1 ml-border-1" src="{{picture_folder}}/img8.png"/>
+  <div class="caption-text pt-2 mb-5"><i>Bethesda Magazine</i> BSO Ad Mockup</div>
+  </div>
+  </div>
+
+    <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+    <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-4">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img9.png"/>
+    </div>
+
+    <div class="col-md-5">
+    <h2>Concert Series Key Art</h2>
+      <div class="ps-5 mb-5 pt-5">One project where I was really able to utilize my personal style was the key art for one of the BSO’s concert series called Music Box. These concerts are meant to introduce the world of classical music to children. With this being the theme, I combined one of my key skills, which is collaging, with targeting a young audience to design these key art collages. I themed each concert key art to have a central color from the brand guidelines, and used collage elements to reinforce the central color theme.</div>
+    </div>
+  </div>
+
+
+  <div class="row justify-content-center g-4 mb-5 pb-5">
+    <div class="col-md-5">
+      <img class="ml-border-1" src="{{picture_folder}}/img14.png"/>
+      <div class="caption-text pt-2"><i>Music Box</i> flyer</div>
+    </div>
+    <div class="col-md-5">
+    <img class="ml-border-1" src="{{picture_folder}}/img15.png"/>
+     <div class="caption-text pt-2"><i>Music Box</i> flyer mockup</div>
+    </div>
+    </div>
+
+  </div>

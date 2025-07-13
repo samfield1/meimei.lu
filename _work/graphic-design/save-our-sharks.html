@@ -1,12 +1,324 @@
 ---
 layout: work-main
-priority: 40
+priority: 10
 
-title: Save our Sharks
-subtitle: I love swimming with cute sharks in San Diego!
-year: 2024-2025
-type: Chuck's
+title: Save Our Sharks
+subtitle: Campaign Design
+year: 2024
+type: Campaign Design, Branding, UI/UX
 description: >
-  I am a lao shu
+  Save Our Sharks is a semester-long campaign project consisting of a brand identity, a website, business cards, letterheads, a brand collaboration, an album cover, a receipt design, a vinyl wall sticker, and an experiential stand. I was given the task to create a campaign centering around a social issue — so I decided on the issue of shark-derived ingredients ending up in some of the daily cosmetic products that we use. This campaign serves to spread awareness and ignite action from those of us who may be unknowingly using shark products.
 ---
-<div class="p-5 m-5">The sign is a subtle joke. The shop is called "Sneed's Feed & Seed", where feed and seed both end in the sound "-eed", thus rhyming with the name of the owner, Sneed. The sign says that the shop was "Formerly Chuck's", implying that the two words beginning with "F" and "S" would have ended with "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would have been called "Chuck's Fuck and Suck".</div>
+{% assign dir = page.url | split: '.' | first %}
+{% assign last_char = dir | slice: -1 %}
+{% if last_char == '/' %}
+  {% assign end = dir.size | minus: 1 %}
+  {% assign dir = dir | slice: 0, end %}
+{% endif %}
+{% assign picture_folder = "/assets" | append: dir %}
+
+<div class="container p-5">
+
+<div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Branding</h2>
+      <div>The very first thing to figure out about designing the campaign was the branding. The typography, the color palette, and the visual elements. The ocean theme gave me the liberty to use a range of blues in all my designed assets. As for the logo and slogan, I aimed for a bold and modern look, to communicate that ‘Save our sharks’ is not just the name of the campaign; it is also a declaration that we must all aim to do.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mb-5 pb-5">
+    <div class="col-md-6">
+      <img class="ml-border-1" src="{{picture_folder}}/img1.png"/>
+      <div class="caption-text pt-2">Campaign logo in navy</div>
+    </div>
+    <div class="col-md-6">
+    <img class="ml-border-1" src="{{picture_folder}}/img2.png"/>
+     <div class="caption-text pt-2">Campaign logo in ice blue</div>
+    </div>
+    </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <h2 class="mt-5 pe-5">Stationery Suite</h2>
+      <div class="pe-5 mb-5">One key visual element present throughout the entire campaign was the use of a gradient that went from light blue to dark blue. It’s very effective in communicating the ocean as a backdrop for almost all of the designed assets.</div>
+    </div>
+    <div class="col-md-6">
+    <div class="col-md-4">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img3.png"/>
+    </div>
+      <div class="caption-text pt-2 mb-5">Business Card</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Letterhead</h2>
+      <div>The letterhead follows the same gradient that the business cards do, along with the same neon blue dappled water vector illustration. I felt that hand-illustrating marine life would have changed the tone to become more playful, so instead I made dappled water vector shapes.</div>
+    </div>
+  </div>
+
+    <div class="row justify-content-center g-4 mb-5 pb-5">
+    <div class="col-md-4">
+      <img class="ml-border-1" src="{{picture_folder}}/img5.png"/>
+      <div class="caption-text pt-2">Letterhead front</div>
+    </div>
+    <div class="col-md-4">
+    <img class="ml-border-1" src="{{picture_folder}}/img6.png"/>
+     <div class="caption-text pt-2">Letterhead back</div>
+    </div>
+    </div>
+
+    <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+
+  <div class="col-md-6">
+    <div class="col-md-12">
+      <img src="{{picture_folder}}/img7.png"/>
+    </div>
+      <div class="caption-text pt-2 mb-5">Save Our Sharks Website</div>
+    </div>
+
+    <div class="col-md-5">
+      <h2 class="mt-5 pe-5">Campaign Website</h2>
+      <div class="pe-5 mb-5">The Save Our Sharks website serves as the central hub for all the research that went into the campaign.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mb-5 pb-5">
+    <div class="col-md-6">
+      <img class="ml-border-1" src="{{picture_folder}}/img8.png"/>
+      <div class="caption-text pt-2">About Page</div>
+    </div>
+    <div class="col-md-6">
+    <img class="ml-border-1" src="{{picture_folder}}/img9.png"/>
+     <div class="caption-text pt-2">'Your Part' Page'</div>
+    </div>
+    </div>
+
+  <div class="row justify-content-center g-4 mt-5">
+    <div class="col-md-6">
+      <video class="ml-border-1" autoplay loop muted playsinline>
+        <source src="{{picture_folder}}/vid1.webm" type="video/webm"/>
+      </video>
+      <div class="caption-text pt-2 mb-5">Exploring the 'Your Part' page</div>
+    </div>
+    <div class="col-md-5">
+      <h2 class="mt-5 ps-5">'Your Part' + Resources Pages</h2>
+      <div class="ps-5">A huge emphasis of the campaign is that everyday people are capable of making a difference. There is a section of the website titled ‘Your Part’, which is where the user learns what it is they can do to live a #SharkFree life. Then, under the ‘Resources’ tab, the user can start getting names of which brands to avoid and which brands have taken the #SharkFree pledge.</div>
+    </div>
+  </div>
+
+    <div class="row justify-content-center g-4 mt-5">
+    <div class="col-md-5">
+      <h2 class="mt-5 ps-5">About + Find Us Pages</h2>
+      <div class="ps-5">The ‘About Us’ page details what exactly the issue is — the usage of shark-derived ingredients such as shark squalene in our everyday cosmetic products. Sharks get killed in the millions every year due to the illegal shark trade. That, we have no control over. But we can get informed on which products to avoid so as to not use sharks in the things we purchase. </div>
+    </div>
+
+    <div class="col-md-6">
+      <video class="ml-border-1" autoplay loop muted playsinline>
+        <source src="{{picture_folder}}/vid2.webm" type="video/webm"/>
+      </video>
+      <div class="caption-text pt-2 pb-5 mb-5">Exploring the About + Find Us Pages</div>
+    </div>
+
+  </div>
+
+  <div class="row justify-content-center g-3 mb-5 pb-5">
+    <div class="col-md-2">
+      <img class="ml-border-1" src="{{picture_folder}}/img10.png"/>
+    </div>
+    <div class="col-md-2">
+    <img class="ml-border-1" src="{{picture_folder}}/img11.png"/>
+    </div>
+    <div class="col-md-2">
+    <img class="ml-border-1" src="{{picture_folder}}/img12.png"/>
+    </div>
+    <div class="col-md-2">
+      <img class="ml-border-1" src="{{picture_folder}}/img13.png"/>
+    </div>
+      <div class="col-md-2">
+      <img class="ml-border-1" src="{{picture_folder}}/img14.png"/>
+    </div>
+    </div>
+
+    <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Brand Collaboration</h2>
+      <div>One of the most fun parts of this campaign was choosing what to do for the designed components. I had to think deeply about what would make sense for a campaign about shark conservation and cosmetic products. A soap and beauty product store like Bath and Body Works was the perfect answer. Even if Bath and Body Works were simply to just have a limited edition line that was part of a collaboration between Save Our Sharks, it would make millions of people aware of the campaign.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+  <div class="col-md-9">
+      <img src="{{picture_folder}}/img15.png"/>
+  </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <h2 class="mt-5 pe-5">Coat Design</h2>
+      <div class="pe-5 mb-5">But as with most things in design, it has to be eye-catching. Especially with a brand like Bath and Body Works where their visual design is crucial to their sales, the Bath and Body Works x Save Our Sharks collaboration had to artfully tell the story of the campaign.</div>
+    </div>
+    <div class="col-md-4">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img16.png"/>
+      <div class="caption-text pt-2 mb-5">Business Card</div>
+    </div>
+  </div>
+
+    <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <div>I once again utilized the deep sea gradient, except this time on soap, lotion, and body wash coat designs. Since I myself am a loyal customer to Bath and Body Works, I simply imagined what kind of coat design would stand out and catch my eye if I were browsing the store. All of their coat designs are beautifully designed, but often very maximalist. I pulled back on my own maximalist instincts and instead went for a simple but sophisticated look.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+  <div class="col-md-8">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img19.png"/>
+  </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Musical Artist Collaboration</h2>
+      <div>I got to choose another designed component as well, and I decided upon an album cover; specifically, an album where famous musical artists each contribute a song they wrote about the campaign, and on a larger scale, ocean conservation. This component may seem random and unrelated to the campaign’s goal, but there is reasoning behind it. In order to have an effective campaign, it needs to first reach as many people as possible. Something that people use almost everyday is a platform to stream music from. So, if there were an album about shark conservation, it would easily reach a substantial amount of people. </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+  <div class="col-md-8">
+      <img src="{{picture_folder}}/img20.png"/>
+  </div>
+  </div>
+
+    <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <div>More than just reaching a certain number of people though, is a critical factor in a campaign’s effectiveness, which is influence. Celebrities have a critical amount of influence over people; actors, musicians, and content creators. I put the two pieces together and designed the album cover for an album which features many prominent artists’ song contributions, such as Lana del Rey, Lady Gaga, The Weeknd, and A$AP Rocky.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+  <div class="col-md-8">
+      <img src="{{picture_folder}}/img21.png"/>
+  </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-3">
+    <img src="{{picture_folder}}/img22.png"/>
+    </div>
+
+    <div class="col-md-5">
+      <div class="ps-5 mb-5">With these (and many more) influential musicians on the album, the campaign can now reach a much wider range of people; people that it would not have reached without the connection of their favorite artist supporting the cause.</div>
+    </div>
+  </div>
+
+    <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Grocery Store Components</h2>
+      <div>Now that I covered two things that people partake in everyday (cosmetic products and music), the third was grocery stores. Up until this point, I’ve only discussed shark-derived ingredients being present in cosmetic products. But shark meat gets used in our food, too. Which means the next target for the campaign would be grocery stores.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <h2 class="mt-5 pe-5">Window Decal</h2>
+      <div class="pe-5 mb-5">An easy way to do advertising at a grocery store is through a window decal. I wrote up some attention-grabbing lines pertaining to shark meat being in their purchase that would pique the curiosity of the average customer going in and out of the grocery store. In my research I learned that sometimes, shark is sold at supermarkets under a different name meant to disguise the fact that shark is being sold at the store. By scanning the QR code on the window decal, the customer would be directed to the campaign website, where they can read through the list of false names used to disguise shark meat.</div>
+    </div>
+    <div class="col-md-6">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img23.png"/>
+      <div class="caption-text pt-2 mb-5">Window Decal Design</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+  <div class="col-md-9">
+  <img class="mt-1 ml-border-1" src="{{picture_folder}}/img24.png"/>
+  <div class="caption-text pt-2 mb-5">Window Decal Mockup</div>
+  </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-3">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img25.png"/>
+      <div class="caption-text pt-2 mb-5">Receipt design</div>
+    </div>
+
+      <div class="col-md-5">
+      <h2 class="mt-5 ps-5">Receipt</h2>
+      <div class="ps-5 mb-5">An additional designed component that reinforces the window decal is the receipt. Every single customer from the grocery store, whether they throw it away or not, is still handed a receipt. And even if they merely glance at it for a moment, that is long enough for them to see the silhouette of a shark on the receipt.</div>
+    </div>
+  </div>
+
+
+    <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <div class="pe-5 mb-5 pt-5">The receipt will do the job of simply telling the customer to look at a list. It’s not asking for a donation, or for the customer to sign up for something, but just to become aware.</div>
+    </div>
+    <div class="col-md-4">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img26.jpg"/>
+      <div class="caption-text pt-2 mb-5">Receipt Mockup</div>
+    </div>
+  </div>
+
+    <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Experiential Component</h2>
+      <div>The experiential component part of the campaign is an aspect that can engage the audience in an interactive way. I decided on an end-cap being the experiential component: an entire shelf full of shark-free brands, products, and options. These shelves would be located in select stores that have also taken the #SharkFree pledge.</div>
+    </div>
+  </div>
+
+<div class="row justify-content-center">
+  <div class="col-md-8">
+  <img class="mt-1 ml-border-1" src="{{picture_folder}}/img27.png"/>
+  <div class="caption-text pt-2 mb-5">List of end-cap locations</div>
+  </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+    <h2>Sephora End-cap</h2>
+      <div class="pe-5 mb-5 pt-5">Since cosmetic products often have shark squalene in them, I decided that the popular cosmetics store Sephora would be a good place to highlight the end-cap. It would have the campaign’s logo and branding, and offer products that are consciously shark-free.</div>
+    </div>
+    <div class="col-md-4">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img28.png"/>
+      <div class="caption-text pt-2 mb-5">Sephora end-cap mockup</div>
+    </div>
+  </div>
+
+
+  </div>

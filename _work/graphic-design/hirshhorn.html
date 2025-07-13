@@ -2,11 +2,150 @@
 layout: work-main
 priority: 20
 
-title: Horse Horn
-subtitle: Sneed's Feed and Seed
-year: 2024-2025
-type: Chuck's
+title: Emerging Artists Exhibition
+subtitle: Exhibited Work
+year: 2018, 2019
+type: Exhibited Work
 description: >
-  I am a lao shu
+  In my senior year of high school and freshman year of college, I applied and got into a rigorous semester-long internship, Emerging Artists, dedicated to endowing teenagers in the DC Metropolitan Area with art skills. The internship was unique in that by the end, all interns showcased their work to the public at the Hirshhorn Museum of Modern Art. 
 ---
-<div class="p-5 m-5">The sign is a subtle joke. The shop is called "Sneed's Feed & Seed", where feed and seed both end in the sound "-eed", thus rhyming with the name of the owner, Sneed. The sign says that the shop was "Formerly Chuck's", implying that the two words beginning with "F" and "S" would have ended with "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would have been called "Chuck's Fuck and Suck".</div>
+{% assign dir = page.url | split: '.' | first %}
+{% assign last_char = dir | slice: -1 %}
+{% if last_char == '/' %}
+  {% assign end = dir.size | minus: 1 %}
+  {% assign dir = dir | slice: 0, end %}
+{% endif %}
+{% assign picture_folder = "/assets" | append: dir %}
+
+
+<div class="container p-5">
+
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+<div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>First Year: Generation Eye</h2>
+      <div>For the 2018 ARTLAB Emerging Artists teen art showcase titled Generation Eye, which investigated the construction of identity through the lens of twenty-first century technology, I designed an ironic ad campaign about smartphones. This project explores the idea of our smartphones knowing about as much about us as other people would.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+  <div class="col-md-8">
+  <img class="mt-1 ml-border-1" src="{{picture_folder}}/img1.png"/>
+  <div class="caption-text pt-2 mb-5">My posters</div>
+  </div>
+  </div>
+
+    <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img2.jpg"/>
+    </div>
+
+    <div class="col-md-5">
+      <h2>Learning Adobe</h2>
+      <div class="ps-5 mb-5 pt-5">This project was my first time using Illustrator to produce vector art. My challenge was to make the vector art simple but still communicate what I was trying to get across.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <h2>My Message</h2>
+      <div class="ps-5 mb-5 pt-5">As for the point I was trying to get across, it was that often our phones know just as much if not more about us than even our friends and family do. The idea that sparked this was the fact that I often use my Notes app to store important information. If I put my credit card information in there, wouldn’t that mean my phone knows more about me than even my own family?</div>
+    </div>
+      <div class="col-md-5">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img3.jpg"/>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img4.jpg"/>
+    </div>
+
+    <div class="col-md-5">
+      <div class="ps-5 mb-5 pt-5">I thought about what other information our phones store, and I found more and more examples. Our phones can identify faces instantly in the photo gallery app. It can suggest the easiest way to get to a certain route that it senses you routinely travel. It can auto-fill in passwords and credit card information. It can recommend you exact products that you were just talking about. I decided to turn these things into advertisement slogans to emphasize the eerie nature of having a smart phone.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-8">
+    <img class="ml-border-1" src="{{picture_folder}}/img5.jpg"/>
+     <div class="caption-text pt-2">Standing beside my posters</div>
+    </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-8">
+    <img class="ml-border-1" src="{{picture_folder}}/img6.jpg"/>
+     <div class="caption-text pt-2">Explaining the concept to a viewer</div>
+    </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+<div class="row justify-content-center my-5">
+    <div class="col-md-6">
+      <h2>Second Year: Vernacular</h2>
+      <div>For the 2019 ARTLAB Emerging Artists teen art showcase titled Vernacular, aimed at exploring the language of our familiar worlds, I designed a collection of posters that serve as a window of what is familiar to me. The posters were printed on large foam boards so that it feels like one is looking out of a window right into everything that has formed my vernacular: family, music, ethnicity, books, and faith.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+  <div class="col-md-8">
+  <img class="mt-1 ml-border-1" src="{{picture_folder}}/img7.png"/>
+  <div class="caption-text pt-2 mb-5">My posters</div>
+  </div>
+  </div>
+
+    <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img10.png"/>
+    </div>
+
+    <div class="col-md-5">
+      <h2>First Poster</h2>
+      <div class="ps-5 mb-5 pt-5">The first poster is about my dad. It centers around a photograph of my dad when he was 19, posing defiantly with his secret weapon, which was his violin. The violin was how my dad made a living for himself in Communist China, and eventually how he got the opportunity to come to America. I wanted to depict my dad with a burst of bright and colorful patterns splaying out behind him, to emphasize the unique and one-of-a-kind person he is.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <h2>Second Poster</h2>
+      <div class="ps-5 mb-5 pt-5">The second poster shows an airplane flying over snowy mountains. The airplane belongs to the airline Air China. Air China is part of my vernacular because of the sheer amount of time I’ve spent on those airplanes as a child. The flight from DC to Shanghai is 15 hours, and by the time I was 12, I had done that flight over 10 times. Even though 15 hours on a plane sounds like a nightmare, I thought it was magical.</div>
+    </div>
+      <div class="col-md-5">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img11.png"/>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-5">
+      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img8.png"/>
+    </div>
+
+    <div class="col-md-5">
+        <h2>Third Poster</h2>
+      <div class="ps-5 mb-5 pt-5">The third poster is a collage of me standing in a field of my favorite books, with new covers that I designed. Another huge aspect of my vernacular is books. Some of my favorite memories are from living the lives of characters from my favorite books. I highlighted those favorite books in the poster.</div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-8">
+    <img class="ml-border-1" src="{{picture_folder}}/stupidassfuckingphoto.png"/>
+     <div class="caption-text pt-2">Standing beside my posters</div>
+    </div>
+
+  <div class="row justify-content-center g-4 mt-5 mb-5">
+    <div class="col-md-8">
+    <img class="ml-border-1" src="{{picture_folder}}/img12.png"/>
+     <div class="caption-text pt-2">After the exhibition</div>
+    </div>
+
+
+  </div>
