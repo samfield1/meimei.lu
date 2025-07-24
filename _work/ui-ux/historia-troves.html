@@ -72,18 +72,16 @@ description: >
     </div>
   </div>
 
-  <div class="row justify-content-center g-4 mb-5 pb-5">
-    <div class="col-md-6">
-      <img class="ml-border-1" src="{{picture_folder}}/img4.png"/>
-      <div class="caption-text pt-2">Article on homepage</div>
-    </div>
-    <div class="col-md-6">
-    <img class="ml-border-1" src="{{picture_folder}}/img5.png"/>
-     <div class="caption-text pt-2">Main article hero image</div>
-    </div>
-    </div>
+<div class="row justify-content-center g-4 mb-5 pb-5">
+  <div class="col-md-12 position-relative ml-overlap-images">
+    <img class="ml-border-1 ml-img-left" src="{{picture_folder}}/img4.png"/>
+    <img class="ml-border-1 ml-img-right" src="{{picture_folder}}/img5.png"/>
+    <div class="caption-text pt-2 ml-caption-left">Article on homepage</div>
+    <div class="caption-text pt-2 ml-caption-right">Main article hero image</div>
+  </div>
+</div>
 
-  <div class="row justify-content-center my-5">
+  <div class="row justify-content-center my-5 row-after-overlap">
     <div class="col-md-6">
       <h2>Building the user experience</h2>
       <div>I wanted for the user to see large, crisp images that would catch their eye, especially if they were looking through the featured articles. For subsections, the photos were emphasized a bit less in order to also fit text on the screen.</div>

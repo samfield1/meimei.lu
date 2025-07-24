@@ -137,3 +137,42 @@
   background-size: cover;
   margin-bottom: 20px;
 }
+
+.ml-overlap-images {
+  height: 350px;
+}
+
+.row-after-overlap {
+  margin-top: 200px !important;
+}
+
+.ml-img-left {
+  position: absolute;
+  left: 10%;
+  width: 50% !important;
+  z-index: 1;
+}
+
+.ml-img-right {
+  position: absolute;
+  left: 40%;
+  top: 200px;
+  z-index: 2;
+  width: 50% !important;
+}
+
+.ml-caption-left {
+  position: absolute;
+  top: 94%;
+  left: 10%;
+  width: 50%;
+  text-align: left !important;
+}
+
+.ml-caption-right {
+  position: absolute;
+  left: 40%;
+  top: 150% !important;
+  width: 50%;
+  text-align: left !important;
+}
