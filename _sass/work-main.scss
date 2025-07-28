@@ -176,3 +176,22 @@
   width: 50%;
   text-align: left !important;
 }
+
+.shark-image-left {
+  position: absolute;
+  left: 51%;
+  width: 20% !important;
+}
+
+.shark-image-right { 
+  position: absolute;
+  left: 69%;
+  top: 198%;
+  width: 20% !important;
+}
+
+.shark-image-caption {
+  position: absolute;
+  left: 51%;
+  top: 249%;
+}
