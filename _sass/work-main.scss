@@ -138,12 +138,16 @@
   margin-bottom: 20px;
 }
 
-.ml-overlap-images {
-  height: 350px;
+.page-item.prev {
+  width: 170px;
 }
 
-.row-after-overlap {
-  margin-top: 200px !important;
+.page-item.next {
+  width: 170px;
+}
+
+.ml-overlap-images {
+  height: 350px;
 }
 
 .ml-img-left {

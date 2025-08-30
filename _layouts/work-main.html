@@ -60,7 +60,9 @@
         {% assign prev_work = work_before_sorted[0] %}
 
         <div class="page-item prev me-auto">
-          {% if prev_work %}<a href="{{ prev_work.url }}"><img src="/assets/work/button-prev.png"/></a>{% endif %}
+          {% if prev_work %}
+            <a href="{{ prev_work.url }}"><img src="/assets/work/button-prev.png"/></a>
+          {% endif %}
         </div>
         <a href="#">
           <span class="work-return"><h3>Back to Top</h3><img src="/assets/work/up-arrow.svg"/></span>

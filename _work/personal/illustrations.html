@@ -21,28 +21,114 @@ description: >
 
 <div class="container p-5">
 
-<div class="row justify-content-center">
+  <div class="row justify-content-center">
     <div class="col-md-10">
       <div class="ml-border-1 mt-5 mb-5"></div>
     </div>
   </div>
 
-   <div class="row justify-content-center my-5">
+  <div class="row justify-content-center my-5">
     <div class="col-md-5 g-5 mb-3">
-      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img1-cropped.png"/>
-    </div>
-      <div class="col-md-5 g-5 mb-3">
-      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img2-cropped.png"/>
+      <img class="mt-1 img-fluid clickable-image"
+           src="{{picture_folder}}/img1-cropped.png"
+           data-full-src="{{picture_folder}}/img1.jpg"
+           data-index="0"
+           data-bs-toggle="modal" data-bs-target="#lightboxModal"
+           alt="Illustration 1" style="cursor:pointer;" loading="lazy">
     </div>
     <div class="col-md-5 g-5 mb-3">
-      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img3-cropped.png"/>
+      <img class="mt-1 img-fluid clickable-image"
+           src="{{picture_folder}}/img2-cropped.png"
+           data-full-src="{{picture_folder}}/img2.png"
+           data-index="1"
+           data-bs-toggle="modal" data-bs-target="#lightboxModal"
+           alt="Illustration 2" style="cursor:pointer;" loading="lazy">
     </div>
-      <div class="col-md-5 g-5 mb-3">
-      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img4-cropped.png"/>
+    <div class="col-md-5 g-5 mb-3">
+      <img class="mt-1 img-fluid clickable-image"
+           src="{{picture_folder}}/img3-cropped.png"
+           data-full-src="{{picture_folder}}/img3.png"
+           data-index="2"
+           data-bs-toggle="modal" data-bs-target="#lightboxModal"
+           alt="Illustration 3" style="cursor:pointer;" loading="lazy">
     </div>
-      <div class="col-md-5 g-5 mb-3">
-      <img class="mt-1 ml-border-1" src="{{picture_folder}}/img5-cropped.png"/>
+    <div class="col-md-5 g-5 mb-3">
+      <img class="mt-1 img-fluid clickable-image"
+           src="{{picture_folder}}/img4-cropped.png"
+           data-full-src="{{picture_folder}}/img4.jpg"
+           data-index="3"
+           data-bs-toggle="modal" data-bs-target="#lightboxModal"
+           alt="Illustration 4" style="cursor:pointer;" loading="lazy">
     </div>
-     </div>
+    <div class="col-md-5 g-5 mb-3">
+      <img class="mt-1 img-fluid clickable-image"
+           src="{{picture_folder}}/img5-cropped.png"
+           data-full-src="{{picture_folder}}/img5.png"
+           data-index="4"
+           data-bs-toggle="modal" data-bs-target="#lightboxModal"
+           alt="Illustration 5" style="cursor:pointer;" loading="lazy">
+    </div>
+  </div>
 
 </div>
+
+<!-- Lightbox Modal -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-transparent border-0 shadow-none">
+      <button type="button" class="btn-close btn-close-white position-absolute end-0 mt-3 me-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center position-relative">
+        <img id="lightboxImage" class="img-fluid rounded"
+             style="max-height: calc(100vh - 6rem);" src="" alt="">
+        <!-- Prev/Next controls -->
+        <button id="prevBtn" class="position-absolute start-0 top-50 translate-middle-y btn btn-link text-white fs-1 px-3" aria-label="Previous">‹</button>
+        <button id="nextBtn" class="position-absolute end-0 top-50 translate-middle-y btn btn-link text-white fs-1 px-3" aria-label="Next">›</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Darken background inside modal for a Pinterest-y feel */
+  #lightboxModal .modal-content { background: rgba(0,0,0,0.9); }
+  #lightboxModal .btn-link { text-decoration: none; }
+  #lightboxModal img { user-select: none; }
+</style>
+
+<script>
+  // Requires Bootstrap 5 bundle JS
+  (function() {
+    const thumbs = Array.from(document.querySelectorAll('.clickable-image'));
+    const modalEl = document.getElementById('lightboxModal');
+    const modalImg = document.getElementById('lightboxImage');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let current = 0;
+
+    // When opening via click, set the starting image
+    modalEl.addEventListener('show.bs.modal', function (e) {
+      const trigger = e.relatedTarget;
+      current = parseInt(trigger.getAttribute('data-index'), 10) || 0;
+      const src = trigger.getAttribute('data-full-src') || trigger.src;
+      modalImg.src = src;
+      modalImg.alt = trigger.alt || '';
+    });
+
+    function showAt(i) {
+      current = (i + thumbs.length) % thumbs.length;
+      const t = thumbs[current];
+      modalImg.src = t.getAttribute('data-full-src') || t.src;
+      modalImg.alt = t.alt || '';
+    }
+
+    prevBtn.addEventListener('click', () => showAt(current - 1));
+    nextBtn.addEventListener('click', () => showAt(current + 1));
+
+    // Keyboard navigation while modal is open
+    document.addEventListener('keydown', (e) => {
+      if (!document.body.classList.contains('modal-open')) return;
+      if (e.key === 'ArrowLeft') { e.preventDefault(); showAt(current - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); showAt(current + 1); }
+    });
+  })();
+</script>
