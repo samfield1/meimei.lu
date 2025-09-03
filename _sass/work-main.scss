@@ -199,3 +199,42 @@
   left: 51%;
   top: 249%;
 }
+
+.view-larger {
+  font-family: sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.view-larger .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.view-larger:hover {
+  color: #e67e22; /* change text color on hover */
+}
+
+.view-larger:hover .arrow {
+  transform: translateX(6px) scale(1.3);
+}
+
+  /* Darken background inside modal for a Pinterest-y feel */
+  #lightboxModal .modal-content { background: rgba(0,0,0,0.9); }
+  #lightboxModal .btn-link { text-decoration: none; }
+  #lightboxModal img { user-select: none; }
+  #prevBtn, #nextBtn {
+    font-size: 80px !important;
+  }
+  .btn-close {
+    font-size: 22px !important;
+  }
+  .clickable-image {
+    cursor: pointer;
+  }
