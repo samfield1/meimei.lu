@@ -225,16 +225,40 @@
   transform: translateX(6px) scale(1.3);
 }
 
-  /* Darken background inside modal for a Pinterest-y feel */
-  #lightboxModal .modal-content { background: rgba(0,0,0,0.9); }
-  #lightboxModal .btn-link { text-decoration: none; }
-  #lightboxModal img { user-select: none; }
-  #prevBtn, #nextBtn {
-    font-size: 80px !important;
-  }
-  .btn-close {
-    font-size: 22px !important;
-  }
-  .clickable-image {
-    cursor: pointer;
-  }
+/* Darken background inside modal for a Pinterest-y feel */
+#lightboxModal .modal-content { background: rgba(0,0,0,0.9); }
+#lightboxModal .btn-link { text-decoration: none; }
+#lightboxModal img { user-select: none; }
+#prevBtn, #nextBtn {
+  font-size: 80px !important;
+}
+.btn-close {
+  font-size: 22px !important;
+}
+.clickable-image {
+  cursor: pointer;
+}
+
+.phone-video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Adjust based on your layout */
+  margin: 0 auto 30px auto;
+  padding: 17px 21px;
+}
+
+.work-main-page .container .row .phone-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 25px; /* optional, if video doesn't match phone border shape */
+}
+
+.phone-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none; /* lets users click through the PNG if needed */
+}
