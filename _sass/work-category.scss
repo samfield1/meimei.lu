@@ -74,8 +74,12 @@ body.work-category-page {
   display: block;
 }
 
+.work-category {
+  margin-bottom: 60px;
+}
+
 .work-category-caption {
-  margin-top: 66px;
+  margin-top: 32px;
 }
 
 .work-category-caption-title {
@@ -85,6 +89,8 @@ body.work-category-page {
   font-style: normal;
   //font-weight: 600;
   line-height: normal;
+  margin-bottom: 20px;
+  height: 62px;
 }
 
 .work-category-caption-arrow {
@@ -99,6 +105,7 @@ body.work-category-page {
 }
 
 .work-category-caption-subtitle {
+  margin-top: 20px;
   color: #3E2B2B;
   font-family: "League Spartan";
   font-size: 20px;

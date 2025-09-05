@@ -41,30 +41,35 @@
       <div class="container gx-5">
         <div class="row gx-5">
           {% assign work = site.work | sort: "priority" %}
-          {% for item in work %}
-            {{ item.name }}
-            {% if item.url contains selected_category %}
-              <div class="col-md-4">
-                <a href="{{ item.url }}">
-                  <div class="work-category-img-container">
-                    <img class="work-category-cover-img" src="/assets{{ item.url }}cover.png" />
-                  </div>
-                  <div class="work-category-caption">
-                    <div class="work-category-caption-title-container">
-                    <div class="work-category-caption-title">{{ item.title }}<span class="work-category-caption-arrow"><img src="/assets/work/work-caption-arrow.svg"/></span></div>
+          {% assign cat_work = work | where_exp: "item", "item.url contains selected_category" %}
+          {% assign last_three_index = cat_work | size | minus: 3 %}
+
+          {% for item in cat_work %}
+            <div class="col-md-4 {% if forloop.index0 >= last_three_index %}work-category-last-row{% else %}work-category{% endif %}">
+              <a href="{{ item.url }}">
+                <div class="work-category-img-container">
+                  <img class="work-category-cover-img" src="/assets{{ item.url }}cover.png" />
+                </div>
+                <div class="work-category-caption">
+                  <div class="work-category-caption-title-container">
+                    <div class="work-category-caption-title">
+                      {{ item.title }}
+                      <span class="work-category-caption-arrow">
+                        <img src="/assets/work/work-caption-arrow.svg"/>
+                      </span>
                     </div>
-                    <div class="work-category-caption-separator"></div>
-                    <div class="work-category-caption-subtitle">{{ item.subtitle}}</div>
                   </div>
-                </a>
-              </div>
-            {% endif %}
+                  <div class="work-category-caption-separator"></div>
+                  <div class="work-category-caption-subtitle">{{ item.subtitle }}</div>
+                </div>
+              </a>
+            </div>
           {% endfor %}
         </div>
       </div>
       <div class="work-category-foot">
         <div class="work-category-foot-text">
-          <img src="/assets/{{ page.url }}/foot-text.svg"/>
+          <img src="/assets/{{ page.url }}foot-text.svg"/>
         </div>
       </div>
     </main>
