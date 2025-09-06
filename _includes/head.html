@@ -8,7 +8,7 @@
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
-  <meta name="description" content="{{ page.description }}" />
+  <meta name="description" content="{{ page.description | strip_html }}" />
   <meta name="author" content="Meimei Lu" />
   <meta name="reply-to" content="{{ site.email }}" />
   <link rel="me" href="mailto:{{ site.email }}">
@@ -17,13 +17,13 @@
   <meta property="og:image" content="https://meimei.lu/assets/bg-img.png" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ page_title | strip_html }}" />
-  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ page.description | strip_html }}" />
   <meta property="og:site_name" content="meimei.lu" />
   <meta property="og:see_also" content="https://meimei.lu" />
 
   <meta name="twitter:card" content="https://meimei.lu/assets/bg-img.png" />
   <meta name="twitter:title" content="{{ page_title | strip_html }}" />
-  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:description" content="{{ page.description | strip_html }}" />
   <meta name="twitter:image" content="https://meimei.lu/assets/bg-img.png" />
 
   <script type="application/ld+json">
@@ -37,7 +37,7 @@
       "https://www.linkedin.com/in/meimei-lu-239bb5222/"
     ],
     "jobTitle": "UI/UX Designer",
-    "description": "{{ page.description }}"
+    "description": "{{ page.description | strip_html }}"
   }
   </script>
 

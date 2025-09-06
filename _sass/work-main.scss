@@ -261,3 +261,25 @@
   height: auto;
   pointer-events: none; /* lets users click through the PNG if needed */
 }
+
+.game-container {
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+}
+
+.partialscreen {
+  display: block;
+
+}
+
+.fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

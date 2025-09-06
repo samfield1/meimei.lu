@@ -26,7 +26,45 @@ description: >
   {% assign dir = dir | slice: 0, end %}
 {% endif %}
 {% assign picture_folder = "/assets" | append: dir %}
+
 <div class="container p-5">
+
+  <div class="row justify-content-center">
+    <div class="col-md-10 mt-5 mb-5">
+      <div class="ml-border-1 mt-5 mb-5"></div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="game-container">
+        <iframe id="game" class="partialscreen" allowfullscreen allow="autoplay; fullscreen" src="{{picture_folder}}/game/index.html"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4 mt-5">
+      <button class="py-2 px-4 d-block mx-auto" onclick="fullscreen();">Open Game Fullscreen</button>
+    </div>
+  </div>
+
+  <script>
+    function exitHandler() {
+        document.getElementById("game").className = "partialscreen";  
+    }
+    function fullscreen() {
+        document.getElementById("game").requestFullscreen();
+        document.getElementById("game").className = "fullscreen";
+        if (document.addEventListener) {
+            document.addEventListener('fullscreenchange', exitHandler, false);
+            document.addEventListener('mozfullscreenchange', exitHandler, false);
+            document.addEventListener('MSFullscreenChange', exitHandler, false);
+            document.addEventListener('webkitfullscreenchange', exitHandler, false);
+        }
+
+    }
+  </script>
 
   <div class="row justify-content-center">
     <div class="col-md-10 mt-5 mb-5">
