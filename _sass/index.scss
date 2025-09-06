@@ -6,9 +6,6 @@ body.index-page {
   background-color: #D8F6FA;
 }
 
-
-
-
 .index-name {
   width: 56%;
   text-align: center;
@@ -24,4 +21,14 @@ body.index-page {
 
 .index-view-works a {
   display: inline-block;
+}
+
+.view-works {
+  animation-duration: 1.0s;
+  animation-delay: 0.5s;
+}
+
+.play-game {
+  animation-delay: 1.5s;
+  animation-duration: 0.5s;
 }

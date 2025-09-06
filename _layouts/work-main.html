@@ -9,7 +9,8 @@
 {% assign picture_folder = "/assets" | append: dir %}
 <!DOCTYPE html>
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  {% include head.html %}
+  {% assign page_title = page.title | append: " - a creative project by Meimei Lu, UI/UX designer in San Diego, CA" %}
+  {% include head.html title=page_title%}
   <body class="work-page work-main-page">
     {% include header.html %}
     <main>

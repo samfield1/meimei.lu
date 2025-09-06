@@ -1,28 +1,49 @@
 <head>
+  {% if include.title %}
+    {% assign page_title = include.title %}
+  {% else %}
+    {% assign page_title = page.title %}
+  {% endif %}
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Language" content="en">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
-  <meta name="description" content="{{ site.description }}" />
+  <meta name="description" content="{{ page.description }}" />
   <meta name="author" content="Meimei Lu" />
-	<meta name="keywords" content="UI design, UX design, UI/UX, user interface design, user experience design, web design, responsive design, interaction design, product design, design portfolio, wireframes, prototyping, usability, accessibility, visual design, mobile app design, website design, figma, figma prototyping, adobe xd, user research, information architecture, design system, UI patterns, UX writing, design thinking, creative direction, brand identity, graphic design, publication design, editorial design, visual storytelling, typography, style guide, logo design, figma design, figma UI kit, UX case study, interactive design, component design, user flows, behavior-driven design, heuristic evaluation" />
+  <meta name="reply-to" content="{{ site.email }}" />
+  <link rel="me" href="mailto:{{ site.email }}">
 
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:image" content="https://meimei.lu/assets/wayfarer-bg.webp" />
+  <meta property="og:image" content="https://meimei.lu/assets/bg-img.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Meimei Lu - {{ page.title | strip_html }}" />
-  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:title" content="{{ page_title | strip_html }}" />
+  <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:site_name" content="meimei.lu" />
   <meta property="og:see_also" content="https://meimei.lu" />
-  <link rel="author" href="https://www.behance.net/meimeilu1e80" />
+
+  <meta name="twitter:card" content="https://meimei.lu/assets/bg-img.png" />
+  <meta name="twitter:title" content="{{ page_title | strip_html }}" />
+  <meta name="twitter:description" content="{{ page.description }}" />
+  <meta name="twitter:image" content="https://meimei.lu/assets/bg-img.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Meimei Lu",
+    "url": "https://meimei.lu",
+    "sameAs": [
+      "https://www.behance.net/meimeilu1e80",
+      "https://www.linkedin.com/in/meimei-lu-239bb5222/"
+    ],
+    "jobTitle": "UI/UX Designer",
+    "description": "{{ page.description }}"
+  }
+  </script>
+
+  <link rel="author" href="https://www.linkedin.com/in/meimei-lu-239bb5222/" />
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-  {% if page.title %}
-    <title>Meimei Lu - {{ page.title | strip_html }}</title>
-  {% else %}
-    <title>Meimei Lu </title>
-  {% endif %}
+  <title>{{ title | strip_html }}</title>
   <link rel="shortcut icon" href="/favicon.ico" />
   
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
