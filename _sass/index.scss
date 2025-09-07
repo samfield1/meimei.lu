@@ -6,12 +6,16 @@ body.index-page {
   background-color: #D8F6FA;
 }
 
-.index-name {
+.index-name-container {
   width: 56%;
   text-align: center;
   margin: 0 auto 20px;
   padding-top: 20px;
   display: block;
+}
+
+.index-name {
+  width: 100%;
 }
 
 .index-view-works {
@@ -23,12 +27,24 @@ body.index-page {
   display: inline-block;
 }
 
+.index-play-game {
+  margin: 0 auto;
+  position: absolute;
+  top: 6%;
+  left: 15%;
+}
+
+.index-play-game img {
+  display: block;
+  width: 50%;
+}
+
 .view-works {
   animation-duration: 1.0s;
   animation-delay: 0.5s;
 }
 
-.play-game {
+img.animate {
   animation-delay: 1.5s;
   animation-duration: 0.5s;
 }

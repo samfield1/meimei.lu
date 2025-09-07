@@ -51,15 +51,22 @@
         <p>Let's work together! I am very responsive on email and would love to hear from you. Find my Linkedin here. <br/> Send me a message anytime at <b>meimeiludesigns@gmail.com</b>!</p>
       </div>
       <!-- Pagination links -->
-      <div class="pagination mx-4">
-        {% assign work_all = site.work | where_exp: "work","work.category == page.category" %}
-        {% assign work_after = work_all | where_exp: "work","work.priority > page.priority" %}
-        {% assign work_after_sorted = work_after | sort: "priority" %}
-        {% assign next_work = work_after_sorted[0] %}
-        {% assign work_before = work_all | where_exp: "work","work.priority < page.priority" %}
-        {% assign work_before_sorted = work_before | sort: "priority" | reverse %}
-        {% assign prev_work = work_before_sorted[0] %}
+      {% assign categories = site.pages | where: "layout","work-category" | sort: "priority" %}
+      {% for category in categories %}
+        {% assign category_name = category.name | split: "." | first %}
+        {% if page.url contains category_name %}
+          {% assign selected_category = category_name %}
+        {% endif %}
+      {% endfor %}
+      {% assign work_all = site.work | where_exp: "w", "w.url contains selected_category" %}
+      {% assign work_after = work_all | where_exp: "w", "w.priority > page.priority" %}
+      {% assign work_after_sorted = work_after | sort: "priority" %}
+      {% assign next_work = work_after_sorted | first %}
 
+      {% assign work_before = work_all | where_exp: "w", "w.priority < page.priority" %}
+      {% assign work_before_sorted = work_before | sort: "priority" | reverse %}
+      {% assign prev_work = work_before_sorted | first %}
+      <div class="pagination mx-4">
         <div class="page-item prev me-auto">
           {% if prev_work %}
             <a href="{{ prev_work.url }}"><img src="/assets/work/button-prev.png"/></a>
