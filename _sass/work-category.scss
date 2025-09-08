@@ -118,6 +118,7 @@ body.work-category-page {
 }
 
 .work-category-foot-text {
-  margin-left: auto;
-  float: right;
+  position: fixed;
+  right: 20px;
+  bottom: 0px;
 }
